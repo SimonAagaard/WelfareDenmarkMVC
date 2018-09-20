@@ -30,7 +30,7 @@ namespace WelfareDenmarkMVC.Controllers
         }
         public IActionResult RemoveDementia()
         {
-            ViewData["Message"] = "How to get rid of dementia";
+            ViewData["Message"] = "Hvordan du slipper af med demens";
 
             return View();
         }

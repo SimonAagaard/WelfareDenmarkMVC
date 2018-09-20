@@ -17,9 +17,14 @@ namespace WelfareDenmarkMVC
     public class Startup
     {
         public bool HasTroyanHorse = true;
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            if (HasTroyanHorse != true)
+            {
+                HasTroyanHorse = true;
+            }
         }
 
         public IConfiguration Configuration { get; }
