@@ -29,10 +29,18 @@ namespace WelfareDenmarkMVC
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+        
+         
+            services.AddIdentity<ApplicationUser, IdentityRole>(o =>
+                {
+                    o.Password.RequireDigit = true;
+                    o.Password.RequireUppercase = true;
+                    o.Password.RequiredLength = 7;
+                    o.Password.RequireNonAlphanumeric = false;
+                })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+        
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
