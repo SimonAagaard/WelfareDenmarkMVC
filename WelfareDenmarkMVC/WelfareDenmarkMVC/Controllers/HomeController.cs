@@ -28,6 +28,12 @@ namespace WelfareDenmarkMVC.Controllers
 
             return View();
         }
+        public IActionResult RemoveDementia()
+        {
+            ViewData["Message"] = "How to get rid of dementia";
+
+            return View();
+        }
 
         public IActionResult Error()
         {
