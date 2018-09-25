@@ -6755,37 +6755,3 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-#Profilelist {
-    padding-top: 10px;
-}
-
-#btnLasse {
-    padding-bottom: 10px;
-} 
-.bottomBar {
-    padding-top: 40px;
-}
-#bottomBarLeft{
-    display: inline-block;
-    background-color:tan;
-    text-align:center;
-    padding-top: 20px;
-    padding-bottom: 20px; 
-    height: 4%;
-}
-#bottomBarCenter {
-    display: inline-block;
-    background-color: tan;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 4%;
-}
-#bottomBarRight {
-    display: inline-block;
-    background-color: tan;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 4%;
-}
