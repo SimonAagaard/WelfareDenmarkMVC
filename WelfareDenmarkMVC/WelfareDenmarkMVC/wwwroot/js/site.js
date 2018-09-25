@@ -39,4 +39,13 @@ function addNew() {
     newDelButton.onclick = function () {
         mainContainer.removeChild(newDiv);
     }
+
+}
+newSaveButton.onClick = function saveItem() {
+    var inputElement = document.getElementById('newText');
+    var theirInput = '';
+    inputElement.addEventListener('change',
+        function (e) {
+            theirInput = e.target.value;
+        });
 }
