@@ -1,17 +1,46 @@
 ﻿@{
     ViewData["Title"] = "Kontakt";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<head>
+    <title>Kontakt</title>
+    <meta charset="UTF-8"/>
+    <link rel="Stylesheet" type="text/css" href="../wwwroot/css/site.css">
+</head>
 
-<address>
+<div class="Contact-Container">
+    <div>
+        <h1 class="Contact-Welcome">Hej, hvordan kan vi hjælpe?</h1>
+    </div>  
+    <div class="Contact-Options-Container">
+    <div class="Contact-Options">
+        <a href="../Views/ContactSupport/LogInSupport.cshtml">
+            <img class="Contact-Options-Image" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="Billedet kunne ikke hentes" title="Log in hjælp"/>
+        <p align="center">Log in hjælp</p>
+        </a>
+    </div>
+    <div class="Contact-Options">
+        <a href="../Views/ContactSupport/LogInSupport.cshtml">
+            <img class="Contact-Options-Image" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="Billedet kunne ikke hentes" title="Ring til os"/>
+            <p align="center">Ring til os</p>
+            </a>
+    </div>
+        <div class="Contact-Options">
+            <a href="../Views/ContactSupport/LogInSupport.cshtml">
+                <img class="Contact-Options-Image" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="Billedet kunne ikke hentes" title="Send os en email"/>
+                <p align="center">Send os en email</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<address style="margin-top: 50px">
     University College Lillebælt<br />
     Seebladsgade 1<br />
     5000 Odense C
 </address>
 
 <address>
-    <strong>Telefon:</strong> <a> 21 35 06 07</a> <br/>
-    <strong>Support:</strong> <a href="mailto:lasseduus@live.dk">Email vores support her</a><br/>
+    <strong>Telefon:</strong> <a> 21 35 06 07</a> <br />
+    <strong>Support:</strong> <a href="mailto:lasseduus@live.dk">Email vores support her</a><br />
     <strong>Marketing:</strong> <a href="mailto:lasseduus@live.dk">Email vores marketing her</a>
 </address>
