@@ -4,44 +4,27 @@ function addNew() {
     var mainContainer = document.getElementById('mainContainer');
     // Create a new div for holding text and button input elements
     var newDiv = document.createElement('div');
-    newDiv.style.marginTop = "10px";
-    newDiv.style.width = "300px";
-    newDiv.style.height = "55px";
-    newDiv.style.display = "block";
+
+    newDiv.className = "form-group";
 
 
     // Create a new text input
     var newText = document.createElement('input');
     newText.type = "input";
     newText.value = counter;
-    newText.style.backgroundColor = "White";
-    newText.style.color = "#111";
-    newText.style.padding = "0px";
-    newText.style.fontSize = "16px";
-    newText.style.borderColor = "#222";
-    newText.style.borderWidth = "1px";
-    newText.style.height = "55px";
+    newText.className = "form-control";
+
     // Create a new button input
     var newDelButton = document.createElement('input');
     newDelButton.type = "button";
-    newDelButton.value = "Delete";
-    newDelButton.style.backgroundColor = "White";
-    newDelButton.style.color = "Black";
-    newDelButton.style.padding = "0px";
-    newDelButton.style.Fontsize = "16px";
-    newDelButton.style.borderColor = "#222";
-    newDelButton.style.borderWidth = "1px";
-    newDelButton.style.height = "55px";
+    newDelButton.value = "Slet";
+    newDelButton.className = "btn btn-default";
+
 
     var newSaveButton = document.createElement('input');
     newSaveButton.type = "button";
-    newSaveButton.value = "Save";
-    newSaveButton.style.backgroundColor = "White";
-    newSaveButton.style.color = "Black";
-    newSaveButton.style.Fontsize = "16px";
-    newSaveButton.style.borderColor = "#222";
-    newSaveButton.style.borderWidth = "1px";
-    newSaveButton.style.height = "55px";
+    newSaveButton.value = "Tilføj";
+    newSaveButton.className = "btn btn-default";
 
     // Append new text input to the newDiv
     newDiv.appendChild(newText);
