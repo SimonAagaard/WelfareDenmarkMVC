@@ -6,15 +6,9 @@
     <title>@ViewData["Title"] - WelfareDenmarkMVC</title>
 
     
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -26,11 +20,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Demens</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                <img src="http://i68.tinypic.com/2a6p7xu.png" width="180px"/>
+</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Hjem</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">Om os</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="RemoveDementia">FjernDemens</a></li>
