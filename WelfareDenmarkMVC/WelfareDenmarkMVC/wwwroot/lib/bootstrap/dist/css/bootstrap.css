@@ -6777,21 +6777,26 @@ button.close {
 }
 
 .Contact-Options-Container {
-    display: flex;
+    overflow: auto;
     margin-top: 100px;
+
 }
 .Contact-Options {
+    float: left;
     width: 150px;
     height: 150px;
     background-color: rgb(118, 127, 122);
     background-color: rgba(118, 127, 122, 0.4);
+    margin-top: 10px;
     margin-left: 100px;
     margin-bottom:20px;
+    border-radius: 5%;  
 }
 .Contact-Options-Image {
     width: 100px;
     height: 100px;
     margin-top: 25px;
+   
 }
 .Contact-Options:hover {
     background-color: rgb(118, 127, 122);
@@ -6803,6 +6808,64 @@ button.close {
     color: #000000;
     font-size: 14px;
     font-weight:bolder
+}
+
+/*Call flipper*/
+.Call-Flipper-Container {
+    position: relative;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    
+}
+.Call-Flipper {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom:20px;
+    -webkit-transition: all 1s ease;
+    transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+   
+    
+}
+.Call-Flipper:hover {
+    transform: rotateY( 180deg );
+    -webkit-transform: rotateY(180deg);
+}
+
+.Call-Front, .Call-Back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+/* front pane, placed above back */
+.Call-Front {
+    z-index: 2;
+   
+    transform: rotateY(0deg);
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(118, 127, 122);
+    background-color: rgba(118, 127, 122, 0.4);
+    border-radius: 5%;  
+}
+
+/* back, initially hidden pane */
+.Call-Back {
+    transform: rotateY(180deg);
+    font-size: 26px;
+    font-weight: bolder;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(118, 127, 122);
+    background-color: rgba(118, 127, 122, 0.4);
+    border-radius: 5%;  
+    padding-top: 35px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
