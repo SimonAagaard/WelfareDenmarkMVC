@@ -124,10 +124,7 @@
     width: 150px;
     height: 150px;
     margin-top: 20px;
-    background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: 80px;
+  
 }
 
     /* About us - Hover-effekt til ovenstående */
@@ -138,11 +135,77 @@
         width: 150px;
         height: 150px;
         margin-top: 20px;
+    
+    }
+.Lasse {
+    background-image: url('https://image.ibb.co/gb70Mp/latze_16.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+}
+    .Lasse:hover {
+        background-image: url('https://image.ibb.co/gb70Mp/latze_16.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: 40px;
+    }
+
+
+.Mikkel {
+    background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+}
+
+    .Mikkel:hover {
         background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: 40px;
     }
+
+.Simon {
+    background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+}
+
+    .Simon:hover {
+        background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: 40px;
+    }
+.Frederik {
+    background-image: url('https://i.imgur.com/97qL2Vn.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+}
+
+    .Frederik:hover {
+        background-image: url('https://i.imgur.com/97qL2Vn.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: 40px;
+    }
+.Christoffer {
+    background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 80px;
+}
+
+    .Christoffer:hover {
+        background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: 40px;
+    }
+
+
 
 /* About us */
 #about-us-person1 {
