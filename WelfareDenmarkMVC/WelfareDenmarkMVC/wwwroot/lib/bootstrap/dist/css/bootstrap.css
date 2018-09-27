@@ -6773,14 +6773,7 @@ button.close {
     text-align: center;
     border-bottom: 5px solid #000000;
 }
-/*.Contact-Image {
-    background-position: center;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}*/
+
 .Contact-Options-Container {
     display: flex;
     margin-top: 100px;
@@ -6789,19 +6782,25 @@ button.close {
     width: 150px;
     height: 150px;
     background-color: rgb(118, 127, 122);
-    background-color: rgba(118, 127, 122, 0.2);
+    background-color: rgba(118, 127, 122, 0.4);
     margin-left: 100px;
     margin-bottom:20px;
-   
 }
 .Contact-Options-Image {
     width: 100px;
     height: 100px;
-    margin-left: 20px;
     margin-top: 25px;
 }
-.Contact-Support {
-    position: absolute;
+.Contact-Options:hover {
+    background-color: rgb(118, 127, 122);
+    background-color: rgba(118, 127, 122, 0.8);
+}
+
+
+.Support-Text {
+    color: #000000;
+    font-size: 14px;
+    font-weight:bolder
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

@@ -11,7 +11,7 @@ namespace WelfareDenmarkMVC.Models.ManageViewModels
     public class EnableAuthenticatorViewModel
     {
         [Required]
-        [StringLength(7, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [StringLength(7, ErrorMessage = "Adgangskoden skal være minumum {2} karakterer langt.", MinimumLength = 7)]
         [DataType(DataType.Text)]
         [Display(Name = "Verification Code")]
         public string Code { get; set; }
