@@ -41,11 +41,11 @@ function addNew() {
     }
 
 }
-newSaveButton.onClick = function saveItem() {
-    var inputElement = document.getElementById('newText');
-    var theirInput = '';
-    inputElement.addEventListener('change',
-        function (e) {
-            theirInput = e.target.value;
-        });
-}
+//newSaveButton.onClick = function saveItem() {
+//    var inputElement = document.getElementById('newText');
+//    var theirInput = '';
+//    inputElement.addEventListener('change',
+//        function (e) {
+//            theirInput = e.target.value;
+//        });
+//}
