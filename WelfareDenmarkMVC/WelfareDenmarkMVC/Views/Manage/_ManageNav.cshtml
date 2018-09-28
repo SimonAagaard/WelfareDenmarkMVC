@@ -6,6 +6,11 @@
 
 <ul class="nav nav-pills nav-stacked">
     <li class="@ManageNavPages.IndexNavClass(ViewContext)"><a asp-action="Index">Profile</a></li>
+    <li class="@ManageNavPages.GalleryNavClass(ViewContext)"><a asp-action="Gallery">Galleri</a></li>
+    <li class="@ManageNavPages.MedicineNavClass(ViewContext)"><a asp-action="Medicine">Medicin</a></li>
+    <li class="@ManageNavPages.CalendarNavClass(ViewContext)"><a asp-action="Calendar">Kalender</a></li>
+
+
     <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)"><a asp-action="ChangePassword">Kodeord</a></li>
     @if (hasExternalLogins)
     {

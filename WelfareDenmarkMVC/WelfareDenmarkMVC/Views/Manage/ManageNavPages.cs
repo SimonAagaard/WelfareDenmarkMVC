@@ -19,6 +19,11 @@ namespace WelfareDenmarkMVC.Views.Manage
 
         public static string TwoFactorAuthentication => "TwoFactorAuthentication";
 
+        public static string Gallery => "Gallery";
+        public static string Medicine => "Medicine";
+        public static string Calendar => "Calendar";
+
+
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
 
         public static string ChangePasswordNavClass(ViewContext viewContext) => PageNavClass(viewContext, ChangePassword);
@@ -26,6 +31,12 @@ namespace WelfareDenmarkMVC.Views.Manage
         public static string ExternalLoginsNavClass(ViewContext viewContext) => PageNavClass(viewContext, ExternalLogins);
 
         public static string TwoFactorAuthenticationNavClass(ViewContext viewContext) => PageNavClass(viewContext, TwoFactorAuthentication);
+
+        public static string GalleryNavClass(ViewContext viewContext) => PageNavClass(viewContext, Gallery);
+
+        public static string MedicineNavClass(ViewContext viewContext) => PageNavClass(viewContext, Medicine);
+
+        public static string CalendarNavClass(ViewContext viewContext) => PageNavClass(viewContext, Calendar);
 
         public static string PageNavClass(ViewContext viewContext, string page)
         {

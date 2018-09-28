@@ -95,7 +95,7 @@
 .about-us-person-container {
     width: 200px;
     height: auto;
-    background-color: #f4f4f4;
+    background-image: linear-gradient(#f4f4f4, white);
     display: inline-block;
     margin-left: 20px;
     margin-top: 20px;
@@ -179,17 +179,17 @@
         background-position-y: 40px;
     }
 .Frederik {
-    background-image: url('https://i.imgur.com/97qL2Vn.png');
+    background-image: url('https://i1.sndcdn.com/artworks-000136011725-p7ugdr-t500x500.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-position-y: 80px;
+    background-position-y: -20px;
 }
 
     .Frederik:hover {
-        background-image: url('https://i.imgur.com/97qL2Vn.png');
+        background-image: url('https://i1.sndcdn.com/artworks-000136011725-p7ugdr-t500x500.jpg');
         background-position: center;
         background-repeat: no-repeat;
-        background-position-y: 40px;
+        background-position-y: -40px;
     }
 .Christoffer {
     background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
