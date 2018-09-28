@@ -166,17 +166,20 @@
     }
 
 .Simon {
-    background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+    background-image: url('https://i.imgur.com/aM5l4mh.png');
     background-position: center;
     background-repeat: no-repeat;
     background-position-y: 80px;
+  
 }
 
     .Simon:hover {
-        background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+        background-image: url('https://i.imgur.com/aM5l4mh.png');
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: 40px;
+        transition: 1.5s;
+       
     }
 .Frederik {
     background-image: url('https://i.imgur.com/97qL2Vn.png');
