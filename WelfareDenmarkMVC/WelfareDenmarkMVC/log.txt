@@ -1,0 +1,24 @@
+2018-10-01T11:29:36
+REQUEST:
+GET - /
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T11:30:06
+REQUEST:
+GET - /Home/Contact
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T11:30:10
+REQUEST:
+GET - /wwwroot/lib/bootstrap/dist/css/bootstrap.css
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 404
+

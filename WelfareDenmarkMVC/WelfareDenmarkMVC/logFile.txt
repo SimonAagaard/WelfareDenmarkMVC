@@ -1,0 +1,196 @@
+2018-10-01T10:28:38
+REQUEST:
+GET - /
+ContentType: Not Specified
+Host: localhost:597032018-10-01T10:28:47
+REQUEST:
+GET - /lib/bootstrap/dist/css/bootstrap.css
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:28:47
+REQUEST:
+GET - /js/site.js?v=Nhmx6GQM6sw9MaLueOIG2fCJ9rU5TkZAUzU8QmJTVEM
+ContentType: Not Specified
+Host: localhost:597032018-10-01T10:28:47
+REQUEST:
+GET - /css/site.css
+ContentType: Not Specified
+Host: localhost:597032018-10-01T10:28:47
+REQUEST:
+GET - /lib/bootstrap/dist/js/bootstrap.js
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:28:48
+REQUEST:
+GET - /lib/jquery/dist/jquery.js
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+
+RESPONSE:
+Status Code: 200
+
+
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:28:48
+REQUEST:
+GET - /favicon.ico
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:28:52
+REQUEST:
+GET - /Home/About
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:28:57
+REQUEST:
+GET - /Home/Contact
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:28:57
+REQUEST:
+GET - /wwwroot/lib/bootstrap/dist/css/bootstrap.css
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 404
+
+2018-10-01T10:29:57
+REQUEST:
+GET - /Account/Login
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:29:59
+REQUEST:
+GET - /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js
+ContentType: Not Specified
+Host: localhost:597032018-10-01T10:29:59
+REQUEST:
+GET - /lib/jquery-validation/dist/jquery.validate.js
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+
+RESPONSE:
+Status Code: 200
+
+2018-10-01T10:30:04
+REQUEST:
+POST - /Account/Login
+ContentType: application/x-www-form-urlencoded
+Host: localhost:59703
+RESPONSE:
+Status Code: 302
+
+2018-10-01T10:30:05
+REQUEST:
+GET - /
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T11:16:17
+REQUEST:
+GET - /
+ContentType: Not Specified
+Host: localhost:597032018-10-01T11:16:42
+REQUEST:
+GET - /
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T11:17:19
+REQUEST:
+GET - /lib/bootstrap/dist/js/bootstrap.js
+ContentType: Not Specified
+Host: localhost:597032018-10-01T11:17:20
+REQUEST:
+GET - /lib/jquery/dist/jquery.js
+ContentType: Not Specified
+Host: localhost:597032018-10-01T11:17:20
+REQUEST:
+GET - /lib/bootstrap/dist/css/bootstrap.css
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 304
+
+2018-10-01T11:17:28
+REQUEST:
+GET - /css/site.css
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 304
+
+
+RESPONSE:
+Status Code: 304
+
+
+RESPONSE:
+Status Code: 304
+
+2018-10-01T11:18:14
+REQUEST:
+GET - /Home/About
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T11:18:19
+REQUEST:
+GET - /js/site.js?v=Nhmx6GQM6sw9MaLueOIG2fCJ9rU5TkZAUzU8QmJTVEM
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T11:19:02
+REQUEST:
+GET - /Home/Contact
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 200
+
+2018-10-01T11:19:31
+REQUEST:
+GET - /wwwroot/lib/bootstrap/dist/css/bootstrap.css
+ContentType: Not Specified
+Host: localhost:59703
+RESPONSE:
+Status Code: 404
+

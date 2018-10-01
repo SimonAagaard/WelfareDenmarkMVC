@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -11,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using WelfareDenmarkMVC.Data;
 using WelfareDenmarkMVC.Models;
 using WelfareDenmarkMVC.Services;
+using WelfareDenmarkMVC.Models.FileLogger;
+using Microsoft.Extensions.Options;
 
 namespace WelfareDenmarkMVC
 {
@@ -66,6 +69,12 @@ namespace WelfareDenmarkMVC
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseMyFileLogger(new MyFileLoggerOptions
+            {
+                FileName = Path.Combine(env.ContentRootPath, "log.txt")
+
+            });
 
             app.UseStaticFiles();
 
