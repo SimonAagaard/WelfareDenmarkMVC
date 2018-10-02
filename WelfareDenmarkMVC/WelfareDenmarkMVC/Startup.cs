@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +9,6 @@ using WelfareDenmarkMVC.Data;
 using WelfareDenmarkMVC.Models;
 using WelfareDenmarkMVC.Services;
 using WelfareDenmarkMVC.Models.FileLogger;
-using Microsoft.Extensions.Options;
 using ZNetCS.AspNetCore.IPFiltering.DependencyInjection;
 
 namespace WelfareDenmarkMVC
@@ -36,12 +31,12 @@ namespace WelfareDenmarkMVC
         // This method gets called by the runtime. Use this method to add services to the container. IKKE SKRIV CONNECTION STRING HER! Brug DefaultConnection
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddIPFiltering(Configuration.GetSection("IPFiltering"));
+            
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-        
-         
+
+
             services.AddIdentity<ApplicationUser, IdentityRole>(o =>
                 {
                     o.Password.RequireDigit = true;
@@ -51,9 +46,12 @@ namespace WelfareDenmarkMVC
                 })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-        
+
+
 
             // Add application services.
+            services.AddIPFiltering(Configuration.GetSection("IPFiltering"));
+
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
@@ -79,6 +77,8 @@ namespace WelfareDenmarkMVC
 
             });
 
+            app.UseIPFiltering();
+
             app.UseStaticFiles();
 
             app.UseAuthentication();
@@ -89,6 +89,8 @@ namespace WelfareDenmarkMVC
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
         }
     }
 }
