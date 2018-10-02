@@ -25,6 +25,7 @@ namespace WelfareDenmarkMVC.Models.FileLogger
             var requestLogMessage = $"REQUEST:\n{request.Method} - {request.Path.Value}{request.QueryString}";
             requestLogMessage+= $"\nContentType: {request.ContentType ?? "Not Specified"}";
             requestLogMessage += $"\nHost: {request.Host}";
+            requestLogMessage += $"\nIP: {request.Host.Host}";
             File.AppendAllText(_options.FileName, $"{DateTime.Now.ToString("s")}\n{requestLogMessage}");
 
             await _next(context);

@@ -10,14 +10,18 @@
     <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs" />
     <Compile Remove="Data\Migrations\20180925180343_ExternalDbTest.cs" />
     <Compile Remove="Data\Migrations\20180925180343_ExternalDbTest.Designer.cs" />
+    <Compile Remove="Migrations\20181001103709_DeleteAgain.cs" />
+    <Compile Remove="Migrations\20181001103709_DeleteAgain.Designer.cs" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <PackageReference Include="IPAddressRange" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
+    <PackageReference Include="ZnetCS.Aspnetcore.IPFiltering" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
