@@ -170,16 +170,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-position-y: 80px;
-  
 }
 
     .Simon:hover {
         background-image: url('https://i.imgur.com/aM5l4mh.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-position-y: 40px;
+        background-position-y: 25px;
         transition: 1.5s;
-       
     }
 .Frederik {
     background-image: url('https://i1.sndcdn.com/artworks-000136011725-p7ugdr-t500x500.jpg');
