@@ -22,6 +22,8 @@ namespace WelfareDenmarkMVC.Views.Manage
         public static string Gallery => "Gallery";
         public static string Medicine => "Medicine";
         public static string Calendar => "Calendar";
+        public static string ContactPersons => "ContactPersons";
+
 
 
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
@@ -37,6 +39,8 @@ namespace WelfareDenmarkMVC.Views.Manage
         public static string MedicineNavClass(ViewContext viewContext) => PageNavClass(viewContext, Medicine);
 
         public static string CalendarNavClass(ViewContext viewContext) => PageNavClass(viewContext, Calendar);
+
+        public static string ContactPersonsNavClass(ViewContext viewContext) => PageNavClass(viewContext, ContactPersons);
 
         public static string PageNavClass(ViewContext viewContext, string page)
         {

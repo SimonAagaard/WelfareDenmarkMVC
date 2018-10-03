@@ -242,3 +242,75 @@
     height: 5%;
     width: 5%;
 }
+
+.contact-person-container {
+    background-color: yellow;
+    width: 100%;
+    height: 100px;
+}
+
+.contact-left {
+    background-color: #f9f9f9;
+    width: 20%;
+    height: 100px;
+    float: left;
+    padding: 10px;
+}
+
+.contact-person-image {
+    background-image: url('https://i.kym-cdn.com/photos/images/newsfeed/001/176/216/122.png');
+    background-position: center;
+    background-position-y: 600px;
+    background-position-x: 280px;
+    margin: auto;
+    width: 60%;
+    padding: 30px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width : 1000px) {
+    .contact-person-image {
+        background-image: url('https://i.kym-cdn.com/photos/images/newsfeed/001/176/216/122.png');
+        background-position: center;
+        background-position-y: 600px;
+        background-position-x: 260px;
+        margin: auto;
+        margin-top: 10px;
+        max-width: 100%;
+        width: 80%;
+        height: 50%;
+        border-radius: 50%;
+    }
+}
+
+
+.contact-right {
+    background-color: red;
+    width: 80%;
+    height: 100px;
+    float: right;
+}
+
+.contact-person-name {
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 50px;
+}
+
+.contact-name-text {
+    padding-top: 17px;
+    padding-left: 17px;
+}
+
+.contact-phone-text {
+    padding-top: 17px;
+    padding-left: 17px;
+}
+
+.contact-person-phone {
+    background-color: #ededed;
+    width: 100%;
+    height: 50px;
+}
+

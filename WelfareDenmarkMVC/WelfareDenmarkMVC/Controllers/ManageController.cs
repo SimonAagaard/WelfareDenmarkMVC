@@ -167,6 +167,14 @@ namespace WelfareDenmarkMVC.Controllers
             return View();
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ContactPersons()
+        {
+            return View();
+        }
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
