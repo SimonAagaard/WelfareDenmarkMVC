@@ -1,10 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Kontakt";
+    ViewData["Title"] = "Contact";
 }
 <head>
     <title>Kontakt</title>
     <meta charset="UTF-8" />
     <link rel="Stylesheet" type="text/css" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+ 
 </head>
 
 @*Container div for the whole page*@
@@ -14,28 +15,28 @@
     </div>  
     <div class="Contact-Options-Container">
 
+
         <div class="Contact-Options">
-            <a href="../Views/ContactSupport/LogInSupport.cshtml">
+            <a runat="server" href="/ContactSupport/LogInSupport">
                 <center>
-                    <img class="Contact-Options-Image" src="https://www.springboard.com/images/springboard/default-profile-mentor-rounded@2x.70dc0c67.png" alt="Billedet kunne ikke hentes" title="Log in hjælp"/>
+                    <img class="Contact-Options-Image" src="https://www.springboard.com/images/springboard/default-profile-mentor-rounded@2x.70dc0c67.png" alt="Billedet kunne ikke hentes" title="Log in hjælp" />
                     <p class="Support-Text" align="center">Log in hjælp</p>
                 </center>
             </a>
         </div>
 
+
         <div class="Call-Flipper-Container">
             <div class="Call-Flipper">
                 <div class="Call-Front">
-                    <a href="../Views/ContactSupport/LogInSupport.cshtml">
-                        <center>
-                            <img class="Contact-Options-Image" src="https://www.ahs.com/img/icon_phone.png" alt="Billedet kunne ikke hentes" title="Ring til os"/>
-                            <p class="Support-Text" align="center">Ring til os</p>
-                        </center>
-                    </a>
+                    <center>
+                        <img class="Contact-Options-Image" src="https://www.ahs.com/img/icon_phone.png" alt="Billedet kunne ikke hentes" title="Ring til os" />
+                        <p class="Support-Text" align="center">Ring til os</p>
+                    </center>
                 </div>
                 <div class="Call-Back">
                     <center>
-                        <p>Telefon: <br/> 21 35 06 07</p>
+                        <p>Telefon: <br /> 21 35 06 07</p>
                     </center>
                 </div>
             </div>
@@ -44,7 +45,7 @@
         <div class="Contact-Options">
             <a href="mailto:lasseduus@live.dk">
                 <center>
-                    <img class="Contact-Options-Image" src="http://icons.iconarchive.com/icons/graphicloads/100-flat/256/email-2-icon.png" alt="Billedet kunne ikke hentes" title="Send os en email"/>
+                    <img class="Contact-Options-Image" src="http://icons.iconarchive.com/icons/graphicloads/100-flat/256/email-2-icon.png" alt="Billedet kunne ikke hentes" title="Send os en email" />
                     <p class="Support-Text" align="center">Send os en email</p>
                 </center>
             </a>
@@ -53,7 +54,7 @@
         <div class="Contact-Options">
             <a href="../Views/ContactSupport/LogInSupport.cshtml">
                 <center>
-                    <img class="Contact-Options-Image" src="https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/FAQ-512.png" alt="Billedet kunne ikke hentes" title="Ofte stillede spørgsmål"/>
+                    <img class="Contact-Options-Image" src="https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/FAQ-512.png" alt="Billedet kunne ikke hentes" title="Ofte stillede spørgsmål" />
                     <p class="Support-Text" align="center">FAQ</p>
                 </center>
             </a>
@@ -62,7 +63,7 @@
         <div class="Contact-Options">
             <a href="../Views/ContactSupport/LogInSupport.cshtml">
                 <center>
-                    <img class="Contact-Options-Image" src="https://cdn1.iconfinder.com/data/icons/unique-round-blue/93/lock-512.png" alt="Billedet kunne ikke hentes" title="Sikkerhed"/>
+                    <img class="Contact-Options-Image" src="https://cdn1.iconfinder.com/data/icons/unique-round-blue/93/lock-512.png" alt="Billedet kunne ikke hentes" title="Sikkerhed" />
                     <p class="Support-Text" align="center">Sikkerhed</p>
                 </center>
             </a>
@@ -71,29 +72,29 @@
         <div class="Contact-Options">
             <a href="../Views/ContactSupport/LogInSupport.cshtml">
                 <center>
-                    <img class="Contact-Options-Image" src="http://radconlr.dreamhosters.com/wp-content/uploads/2015/04/pay-bill-icon-400x400.png" alt="Billedet kunne ikke hentes" title="Betalinger"/>
+                    <img class="Contact-Options-Image" src="http://radconlr.dreamhosters.com/wp-content/uploads/2015/04/pay-bill-icon-400x400.png" alt="Billedet kunne ikke hentes" title="Betalinger" />
                     <p class="Support-Text" align="center">Betalinger</p>
                 </center>
             </a>
-        </div>  
+        </div>
         <div class="Contact-Options">
             <a href="../Views/ContactSupport/LogInSupport.cshtml">
                 <center>
-                    <img class="Contact-Options-Image" src="https://bobwoodrufffoundation.org/wp-content/uploads/2017/03/bwf-donation-icons-one-time.png" alt="Billedet kunne ikke hentes" title="Donationer"/>
+                    <img class="Contact-Options-Image" src="https://bobwoodrufffoundation.org/wp-content/uploads/2017/03/bwf-donation-icons-one-time.png" alt="Billedet kunne ikke hentes" title="Donationer" />
                     <p class="Support-Text" align="center">Donationer</p>
                 </center>
             </a>
-        </div>  
+        </div>
         <div class="Contact-Options">
             <div>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                     <center>
-                        <img class="Contact-Options-Image" src="https://ubisafe.org/images/dissenting-clipart-fist-punching.png" alt="Billedet kunne ikke hentes" title="Afskaf demens"/>
+                        <img class="Contact-Options-Image" src="https://ubisafe.org/images/dissenting-clipart-fist-punching.png" alt="Billedet kunne ikke hentes" title="Afskaf demens" />
                         <p class="Support-Text" align="center">Afskaf demens</p>
                     </center>
                 </a>
             </div>
-        </div>  
+        </div>
     </div>
 </div>
 <br/>

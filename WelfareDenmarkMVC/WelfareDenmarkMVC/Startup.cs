@@ -11,20 +11,15 @@ using Microsoft.Extensions.DependencyInjection;
 using WelfareDenmarkMVC.Data;
 using WelfareDenmarkMVC.Models;
 using WelfareDenmarkMVC.Services;
+using WelfareDenmarkMVC.Views;
 
 namespace WelfareDenmarkMVC
 {
     public class Startup
     {
-        public bool HasTroyanHorse = true;
-        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            if (HasTroyanHorse != true)
-            {
-                HasTroyanHorse = true;
-            }
         }
 
         public IConfiguration Configuration { get; }
@@ -56,21 +51,32 @@ namespace WelfareDenmarkMVC
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
                 app.UseDatabaseErrorPage();
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Shared/Error");
             }
 
             app.UseStaticFiles();
 
             app.UseAuthentication();
-
+            app.Use(async (ctx, next) =>
+            {
+                await next();
+                if (ctx.Response.StatusCode == 404 && !ctx.Response.HasStarted)
+                {
+                    string originalPath = ctx.Request.Path.Value;
+                    ctx.Items["originalPath"] = originalPath;
+                    ctx.Request.Path = "/error/404";
+                    await next();
+                }
+            });
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -10,11 +10,13 @@ using WelfareDenmarkMVC.Models;
 
 namespace WelfareDenmarkMVC.Controllers
 {
-    public class ContactController : Controller
+    public class ContactSupportController : Controller
     {
         // GET: /<controller>/
         public IActionResult LogInSupport()
         {
+            ViewData["Message"] = "LogInSupport";
+
             return View();
         }
     }
