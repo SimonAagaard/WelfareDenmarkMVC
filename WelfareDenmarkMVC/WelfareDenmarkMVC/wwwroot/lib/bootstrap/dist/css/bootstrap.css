@@ -6923,4 +6923,24 @@ button.close {
     border-radius: 5%;
     padding-top: 35px;
 }
+
+/*CSS for the FAQ*/
+#question {
+    font-size: 30px;
+    font-weight: bolder;
+    padding-bottom: 2px;
+    font-family: 'Crete Round', serif;
+    text-align: center;
+}
+#answer {
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Crete Round', serif;
+    border-bottom: 2px solid #000000;
+    align-content: center;
+    text-align: center;
+   
+}
 /*# sourceMappingURL=bootstrap.css.map */
