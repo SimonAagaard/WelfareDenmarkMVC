@@ -42,12 +42,6 @@ namespace WelfareDenmarkMVC.Controllers
         }
 
         //Get: /ContactSupport
-        public IActionResult LogInSupport()
-        {
-            ViewData["Message"] = "Log in Support";
-
-            return View();
-        }
 
         public IActionResult Error()
         {
