@@ -19,5 +19,29 @@ namespace WelfareDenmarkMVC.Controllers
 
             return View();
         }
+        public IActionResult FAQ()
+        {
+            ViewData["Message"] = "FAQ";
+
+            return View();
+        }
+        public IActionResult Security()
+        {
+            ViewData["Message"] = "Security";
+
+            return View();
+        }
+        public IActionResult Payment()
+        {
+            ViewData["Message"] = "Payment";
+
+            return View();
+        }
+        public IActionResult Donations()
+        {
+            ViewData["Message"] = "Donations";
+
+            return View();
+        }
     }
 }
