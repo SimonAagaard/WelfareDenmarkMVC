@@ -7,7 +7,7 @@
     <link rel="Stylesheet" type="text/css" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css">
     @*Lidt hygge font som gør damerne glade*@
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
-
+    <script type="text/javascript" src="js/site.js"></script>
 </head>
 
 @*Container div for the whole page*@
@@ -16,12 +16,24 @@
         <h1 class="Contact-Welcome">Ofte stillede spørgsmål</h1>
     </div>
     <div class="Questions-Container">
-
-        <h1 id="question">Hvorfor ender jeg på en Rick Astley sang, når jeg ville af med min demens?</h1>
-        <h1 id="answer">Fordi du er blevet rick rollet ROFLMAO :DD</h1>
-
+        <button onclick="ShowAnswer()"><img src="https://cdn0.iconfinder.com/data/icons/superuser-web-kit/512/plus_sign_add_first_aid_medical_positive_increase_expand-512.png" style="width: 25px;height: 25px" alt=""/>
+        </button>
+        <p class="question" title="Klik for svar" style="display: inline-block">Hvorfor ender jeg på en Rick Astley sang, når jeg ville af med min demens?</p>
+        <div id="answer1">Fordi du er blevet rick rollet ROFLMAO :DD</div>
     </div>
+   
+    @*<script>
+    function ShowAnswer(cname) {
+        var x = document.getElementsByClassName(cname);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    </script>*@
+   
 </div>
+
 
 
 

@@ -41,9 +41,18 @@ function addNew() {
     }
 
 }
+// script for the FAQ
 function ShowAnswer() {
-
+    var x = document.getElementById("answer1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
 }
+
+
+//}
 //newSaveButton.onClick = function saveItem() {
 //    var inputElement = document.getElementById('newText');
 //    var theirInput = '';

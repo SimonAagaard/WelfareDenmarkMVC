@@ -6842,7 +6842,7 @@ button.close {
     position: absolute;
 }
 
-/* front pane, placed above back */
+/* front, with logo */
 .Call-Front {
     z-index: 2;
    
@@ -6855,7 +6855,7 @@ button.close {
     border-radius: 5%;  
 }
 
-/* back, initially hidden pane */
+/* back, with number, initially hidden*/
 .Call-Back {
     transform: rotateY(180deg);
     font-size: 26px;
@@ -6894,38 +6894,10 @@ button.close {
         -webkit-transform: rotateY(180deg);
     }
 
-.Dementia-Front, .Dementia-Back {
-    backface-visibility: hidden;
-    position: absolute;
-}
 
-/* front pane, placed above back */
-.Dementia-Front {
-    z-index: 2;
-    transform: rotateY(0deg);
-    float: left;
-    width: 150px;
-    height: 150px;
-    background-color: rgb(118, 127, 122);
-    background-color: rgba(118, 127, 122, 0.4);
-    border-radius: 5%;
-}
 
-/* back, initially hidden pane */
-.Dementia-Back {
-    transform: rotateY(180deg);
-    font-size: 26px;
-    font-weight: bolder;
-    width: 150px;
-    height: 150px;
-    background-color: rgb(118, 127, 122);
-    background-color: rgba(118, 127, 122, 0.4);
-    border-radius: 5%;
-    padding-top: 35px;
-}
-
-/*CSS for the FAQ*/
-#question {
+/*Styling for the FAQ*/
+.question {
     font-size: 30px;
     font-weight: bolder;
     padding-bottom: 2px;
@@ -6941,6 +6913,7 @@ button.close {
     border-bottom: 2px solid #000000;
     align-content: center;
     text-align: center;
+    visibility: hidden;
    
 }
 /*# sourceMappingURL=bootstrap.css.map */

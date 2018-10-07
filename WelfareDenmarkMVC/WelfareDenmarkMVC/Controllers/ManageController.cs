@@ -102,7 +102,7 @@ namespace WelfareDenmarkMVC.Controllers
                 }
             }
 
-            StatusMessage = "Your profile has been updated";
+            StatusMessage = "Din profil blev opdateret";
             return RedirectToAction(nameof(Index));
         }
 
