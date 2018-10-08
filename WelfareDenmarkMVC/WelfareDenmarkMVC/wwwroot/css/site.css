@@ -244,13 +244,17 @@
 }
 
 .contact-person-container {
-    background-color: yellow;
+    background-color: #f9f9f9;
     width: 100%;
     height: 100px;
 }
 
+.contact-person-container:hover {
+    background-color: #dddddd;
+
+}
+
 .contact-left {
-    background-color: #f9f9f9;
     width: 20%;
     height: 100px;
     float: left;
@@ -286,30 +290,27 @@
 
 
 .contact-right {
-    background-color: red;
     width: 80%;
     height: 100px;
     float: right;
 }
 
 .contact-person-name {
-    background-color: #f9f9f9;
     width: 100%;
     height: 50px;
 }
 
-.contact-name-text {
+#contact-name-text {
     padding-top: 17px;
     padding-left: 17px;
 }
 
-.contact-phone-text {
+#contact-phone-text {
     padding-top: 17px;
     padding-left: 17px;
 }
 
 .contact-person-phone {
-    background-color: #ededed;
     width: 100%;
     height: 50px;
 }
