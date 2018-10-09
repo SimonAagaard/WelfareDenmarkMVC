@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Ofte Stillede Spørgsmål";
+   
 }
 <head>
 
@@ -7,21 +8,64 @@
     <link rel="Stylesheet" type="text/css" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css">
     @*Lidt hygge font som gør damerne glade*@
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
-
+    <script type="text/javascript" src="js/site.js"></script>
 </head>
 
 @*Container div for the whole page*@
-<div class="Contact-Container">
-    <div>
-        <h1 class="Contact-Welcome">Ofte stillede spørgsmål</h1>
-    </div>
+<div class="Faq-Container">
+    <h1 class="Faq-Welcome">Ofte stillede spørgsmål</h1>
     <div class="Questions-Container">
 
-        <h1 id="question">Hvorfor ender jeg på en Rick Astley sang, når jeg ville af med min demens?</h1>
-        <h1 id="answer">Fordi du er blevet rick rollet ROFLMAO :DD</h1>
+        @*Q1*@
+        <a class="question" href="javascript:ShowAnswer('a1')" title="Klik for svar" style="text-decoration: none">Hvorfor ender jeg på en Rick Astley sang, når jeg ville af med min demens?</a>
+        <div id="a1" style="display: none">Fordi du er blevet rick rollet ROFLMAO :DD</div>
+        <div class="Breaker">___________________________________________________________________ </div>
+        <br />
 
+        @*Q2*@
+        <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a2')" style="text-decoration: none">Kan andre se mit info på min huskeliste?</a>
+        <div id="a2" style="display: none">Nej, kun du kan se din eget information. </div>
+        <div class="Breaker">___________________________________________________________________ </div>
+        <br />
+
+        @*Q3*@
+        <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a3')" style="text-decoration: none">Har i en App?</a>
+        <div id="a3" style="display: none">Nej, ikke endnu.</div>
+        <div class="Breaker">___________________________________________________________________</div>
+        <br />
+
+        @*Q4*@
+        <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a4')" style="text-decoration: none">Hvad er welfare denmarks mission?</a>
+        <div id="a4" style="display: none">At sprede god karma og hygge sig på Tenerif i hawaii skjorter</div>
+        <div class="Breaker">___________________________________________________________________</div>
+        <br />
+
+        @*Q5*@
+        <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a5')" style="text-decoration: none">Koster det noget at benytte siden og huskelisten?</a>
+        <div id="a5" style="display: none">Nej, ikke en krone, Lasse betaler </div>
+        <div class="Breaker">___________________________________________________________________</div>
+        <br />
+
+        @*Q6*@
+        <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a6')" style="text-decoration: none">Hvad gør jeg hvis jeg har glemt mit kodeord?</a>
+        <div id="a6" style="display: none">For at få et nyt kodeord kan klikke lige <a href="@Url.Action("ForgotPassword", "Account")">her</a></div>
+        <div class="Breaker">___________________________________________________________________</div>
+        <br />
+
+        @*Q7*@
+        <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a7')" style="text-decoration: none">Hvad vil det sige at være MDMAtiker?</a>
+        <div id="a7" style="display: none">At være frisk ud af badet og gøre damerne glade </div>
+        <div class="Breaker">___________________________________________________________________</div>
+        <br />
+
+        @*Q8*@
+        <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a8')" style="text-decoration: none">Jeg er træt af jeres pis, jeg vil væk</a>
+        <div id="a8" style="display: none">For at slette din bruger kan du trykke <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">her</a> hvis dét ikke virkede kan du prøve <a href="@Url.Action("DeleteAccount", "Account")">her</a></div>
+        <div class="Breaker">___________________________________________________________________</div>
+        <br />
     </div>
 </div>
+
 
 
 
