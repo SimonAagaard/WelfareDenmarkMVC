@@ -126,7 +126,7 @@ namespace WelfareDenmarkMVC.Controllers
             var email = user.Email;
             await _emailSender.SendEmailConfirmationAsync(email, callbackUrl);
 
-            StatusMessage = "Verification email sent. Please check your email.";
+            StatusMessage = "Emailbekræftelse sendt. Tjek din mail!";
             return RedirectToAction(nameof(Index));
         }
 

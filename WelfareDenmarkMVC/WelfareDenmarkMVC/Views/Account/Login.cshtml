@@ -6,7 +6,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Log ind";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -23,7 +23,7 @@
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Password"></label>
+                    <label asp-for="Password">Kodeord</label>
                     <input asp-for="Password" class="form-control" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-default">Log in</button>
+                    <button type="submit" class="btn btn-default">Log ind</button>
                 </div>
                 <div class="form-group">
                     <p>
@@ -51,17 +51,23 @@
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
-            <h4>Use another service to log in.</h4>
+            <h4>Velkommen!</h4>
             <hr />
             @{
                 var loginProviders = (await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList();
                 if (loginProviders.Count == 0)
                 {
                     <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
+						<p>
+							Dette website ment som et hjælpemiddel
+							til dig med begyndende demens. Det kan bruges til at gemme oplysninger, noter og
+							billeder af dig og dine pårørende.
+							Demens er tegn på sygdom i hjernen og viser sig ved svækkede kognitive funktioner.
+							Demens rammer oftest personer over 65 år, men kan ses helt ned i 40-50 års alderen.
+							Har man symptomer, er det vigtigt at blive grundig udredt og få en præcis diagnose,
+							så man kan få tilbudt den rette behandling, støtte og pleje.<br /><br />
+							Log ind ved at indtaste din email og kodeord til venstre.
+						</p>
                     </div>
                 }
                 else
