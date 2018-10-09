@@ -62,7 +62,11 @@ function clickCounter() {
     }
 }
 function ShowAnswer() {
-
+    if (document.getElementById(id).style.display == "none") {
+        document.getElementById(id).style.display = '';
+    } else {
+        document.getElementById(id).style.display = "none";
+    }
 }
 
 
