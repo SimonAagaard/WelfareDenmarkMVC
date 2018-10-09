@@ -61,7 +61,9 @@ function clickCounter() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-function ShowAnswer() {
+
+//Script for showing/hidding answers in FAQ
+function ShowAnswer(id) {
     if (document.getElementById(id).style.display == "none") {
         document.getElementById(id).style.display = '';
     } else {
