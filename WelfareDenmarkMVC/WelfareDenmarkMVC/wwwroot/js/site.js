@@ -41,31 +41,12 @@ function addNew() {
     }
 
 }
-
-function newContact() {
-    document.getElementById("contact-phone-text").innerHTML = "Hello World";
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("result").innerHTML = "Vi har nu fjernet demens " + localStorage.clickcount + " gange.";
-}, false);
-
-function clickCounter() {
-    if (typeof (Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount) + 1;
-        } else {
-            localStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "Vi har nu fjernet demens " + localStorage.clickcount + " gange.";
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-
 function ShowAnswer() {
 
 }
+
+
+//}
 //newSaveButton.onClick = function saveItem() {
 //    var inputElement = document.getElementById('newText');
 //    var theirInput = '';
