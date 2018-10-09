@@ -42,12 +42,12 @@ function addNew() {
 
 }
 // script for the FAQ
-function ShowAnswer() {
-    var x = document.getElementById("answer1");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+function ShowAnswer(id) {
+    
+    if (document.getElementById(id).style.display == "none") {
+        document.getElementById(id).style.display = '';
     } else {
-        x.style.display = "none";
+        document.getElementById(id).style.display = "none";
     }
 }
 
