@@ -72,6 +72,25 @@ function ShowAnswer(id) {
 }
 
 
+//Script for greeting when visiting profile
+window.onload = function () {
+	var greetingMessage = document.getElementById("greeting");
+	var greeting;
+	var time = new Date().getHours();
+	if (time < 9) {
+		greeting = "Godmorgen og velkommen til din profil!";
+	} else if (time < 12) {
+		greeting = "God formiddag og velkommen til din profil!";
+	} else if (time < 13) {
+		greeting = "Goddag og velkommen til din profil!";
+	} else if (time < 18) {
+		greeting = "God eftermiddag og velkommen til din profil!";
+	} else {
+		greeting = "Godaften og velkommen til din profil!";
+	}
+	greetingMessage.innerHTML = greeting;
+}, false;
+
 
 
 //}
