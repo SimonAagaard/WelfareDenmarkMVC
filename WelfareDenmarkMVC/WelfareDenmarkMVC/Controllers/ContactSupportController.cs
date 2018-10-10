@@ -55,5 +55,12 @@ namespace WelfareDenmarkMVC.Controllers
 
             return View();
         }
+        public IActionResult Index()
+        {
+            ViewData["Message"] = "Index";
+
+            return View();
+        }
+
     }
 }
