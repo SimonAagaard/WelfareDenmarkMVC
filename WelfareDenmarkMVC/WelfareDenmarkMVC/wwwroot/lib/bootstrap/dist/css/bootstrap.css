@@ -6982,17 +6982,22 @@ button.close {
     text-align: center;
     margin-left: 200px;
 }
+#top {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /*Styling for LogInSupport page*/
 .LogIn-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
-    font-size: 50px;
+    font-size: 100px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
     color: black;
     text-align: center;
-    border-bottom: 5px solid #000000;
+    border-bottom: 2px solid #000000;
 }
 
 .LogIn-Container {
@@ -7001,31 +7006,40 @@ button.close {
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
-    background-color: #f7f9fa;
+  
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    line-height: 1.65;
+    background-size: cover;
+    border-radius: 5px;
+    border-bottom-style: solid;
+    border: solid;
 }
 
 .LogIn-Sidebar {
     height: 100%;
-    width: 160px;
+    width: 100px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #222;
     overflow-x: hidden;
     padding-top: 45px;
-    font-size: 20px;
+   
 }
 .LogIn-Sidebar a {
     font-family: 'Crete Round', serif;
     padding: 6px 8px 6px 16px;
-    font-size: 20px;
-    color: #818181;
+    font-size: 14px;
+    color: White;
     display: block;
 }
 
     .LogIn-Sidebar a:hover {
         color: white;
+        text-shadow: 0px 0px 20px #FFE818;
         text-decoration: none;
     }
 
