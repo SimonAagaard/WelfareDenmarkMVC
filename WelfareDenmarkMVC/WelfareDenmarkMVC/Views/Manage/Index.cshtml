@@ -31,20 +31,22 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber"></label>
+                <label asp-for="PhoneNumber">Telefonnummer</label>
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-default">Gem</button>
-			<br /><br />
-            <div id="mainContainer">
-                <label>Huskeliste</label>
-                <div id="Profilelist">
-                    <input class="btn btn-default" id="btnLasse" value="Tilføj noget du gerne vil huske!" onClick="addNew()"/>
-                </div>
+            <div class="form-group">
+                <input type="submit" value="Gem" class="btn btn-default" />
             </div>
-        </form> 
+        </form>
     </div>
+</div>
+
+<div class="checkList">
+    @{
+        await Html.RenderPartialAsync("_CreateChecklistPartial", new ChecklistViewModel());
+    }
+
 </div>
 
 @section Scripts {
