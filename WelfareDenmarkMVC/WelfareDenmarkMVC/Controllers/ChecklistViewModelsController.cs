@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WelfareDenmarkMVC.Data;
 using WelfareDenmarkMVC.Models.AccountViewModels;
+using WelfareDenmarkMVC.Models.ManageViewModels;
 
 namespace WelfareDenmarkMVC.Controllers
 {
@@ -23,6 +24,7 @@ namespace WelfareDenmarkMVC.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.ChecklistViewModel.ToListAsync());
+            
         }
 
         // GET: ChecklistViewModels/Details/5
