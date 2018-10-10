@@ -10,6 +10,7 @@ namespace WelfareDenmarkMVC.Models.AccountViewModels
     {
         public string ChecklistItem { get; set; }
         [Key]
+        public int Id { get; set; }
         public string Email { get; set; }
 
     }

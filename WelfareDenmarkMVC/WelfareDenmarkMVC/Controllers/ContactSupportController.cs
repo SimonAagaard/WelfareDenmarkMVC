@@ -49,5 +49,11 @@ namespace WelfareDenmarkMVC.Controllers
             ViewData["Message"] = "ForgotYouPassword";
             return View();
         }
+        public IActionResult KeyTerms()
+        {
+            ViewData["Message"] = "KeyTerms";
+
+            return View();
+        }
     }
 }
