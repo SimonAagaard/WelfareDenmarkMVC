@@ -1,6 +1,6 @@
 ﻿@model TwoFactorAuthenticationViewModel
 @{
-    ViewData["Title"] = "To trins bekr�ftigelse";
+    ViewData["Title"] = "To trins bekræftigelse";
     ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
 }
 <head>
@@ -40,10 +40,10 @@
     <a asp-action="GenerateRecoveryCodesWarning" class="btn btn-default">Reset recovery codes</a>
 }
 
-<h5>Her kan du tilf�je To trins bekr�ftigelse</h5>
+<h5>Her kan du tilføje To trins bekræftigelse</h5>
 @if (!Model.HasAuthenticator)
 {
-    <a asp-action="EnableAuthenticator" class="btn btn-default">Tilf�j</a>
+    <a asp-action="EnableAuthenticator" class="btn btn-default">Tilføj</a>
 }
 else
 {
