@@ -7079,6 +7079,10 @@ button.close {
     font-size: 18px;
 }
 
+.Security-Image {
+    width: 300px;
+}
+
 /*Styling for DeleteAccount page*/
 .delete-container {
     font-size: 24px;
