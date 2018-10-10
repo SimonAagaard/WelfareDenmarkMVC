@@ -330,3 +330,8 @@
     height: 50px;
 }
 
+#greeting {
+	padding-top: 20px;
+	font-size: 20px;
+}
+
