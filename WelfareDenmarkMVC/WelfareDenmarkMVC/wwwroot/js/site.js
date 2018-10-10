@@ -72,6 +72,8 @@ function ShowAnswer(id) {
 }
 
 
+
+
 //}
 //newSaveButton.onClick = function saveItem() {
 //    var inputElement = document.getElementById('newText');

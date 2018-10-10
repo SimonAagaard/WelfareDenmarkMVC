@@ -6756,6 +6756,7 @@ button.close {
     display: none !important;
   }
 }
+
 /*Contact page styling */
 .Contact-Welcome {
     padding-top: 100px;
@@ -6943,7 +6944,6 @@ button.close {
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
-   
 }
 
 .question {
@@ -6992,10 +6992,43 @@ button.close {
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
+    background-color: #f7f9fa;
 }
 
+.LogIn-Sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 45px;
+    font-size: 20px;
+}
+.LogIn-Sidebar a {
+    font-family: 'Crete Round', serif;
+    padding: 6px 8px 6px 16px;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+    .LogIn-Sidebar a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
 .LogIn-Intro {
-    font-size: 18px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.LogIn-Answer {
+    font-family: 'Crete Round', serif;
+    font-size: 24px;
+    color: #818181;
 }
 
 /*Styling for Payment page*/
