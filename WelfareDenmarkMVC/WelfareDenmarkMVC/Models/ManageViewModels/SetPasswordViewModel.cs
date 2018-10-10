@@ -16,7 +16,7 @@ namespace WelfareDenmarkMVC.Models.ManageViewModels
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "De indtastede adgangskoder stemmer ike overens.")]
+        [Compare("NewPassword", ErrorMessage = "De indtastede adgangskoder stemmer ikke overens.")]
         public string ConfirmPassword { get; set; }
 
         public string StatusMessage { get; set; }
