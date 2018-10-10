@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WelfareDenmarkMVC.Models;
+using WelfareDenmarkMVC.Models.AccountViewModels;
 
 namespace WelfareDenmarkMVC.Data
 {
@@ -22,5 +23,7 @@ namespace WelfareDenmarkMVC.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<WelfareDenmarkMVC.Models.AccountViewModels.ChecklistViewModel> ChecklistViewModel { get; set; }
     }
 }
