@@ -157,21 +157,23 @@
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: 40px;
+        transition: 0.5s;
     }
 
 
 .Mikkel {
-    background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+    background-image: url('https://i.imgur.com/Y4wt1Xg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-position-y: 80px;
 }
 
     .Mikkel:hover {
-        background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+        background-image: url('https://i.imgur.com/Y4wt1Xg.png');
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: 40px;
+        transition: 0.5s;
     }
 
 .Simon {
@@ -186,20 +188,21 @@
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: 25px;
-        transition: 1.5s;
+        transition: 0.5s;
     }
 .Frederik {
-    background-image: url('https://i1.sndcdn.com/artworks-000136011725-p7ugdr-t500x500.jpg');
+    background-image: url('https://i.imgur.com/XdBDdKI.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-position-y: -20px;
+    background-position-y: 70px;
 }
 
     .Frederik:hover {
-        background-image: url('https://i1.sndcdn.com/artworks-000136011725-p7ugdr-t500x500.jpg');
+        background-image: url('https://i.imgur.com/XdBDdKI.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-position-y: -40px;
+        background-position-y: 0px;
+        transition: 0.5s;
     }
 .Christoffer {
     background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
@@ -213,6 +216,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-position-y: 40px;
+        transition: 0.5s;
     }
 
 

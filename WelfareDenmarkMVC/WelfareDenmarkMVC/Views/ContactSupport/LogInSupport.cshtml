@@ -9,12 +9,115 @@
     <script type="text/javascript" src="js/site.js"></script>
 </head>
 
-<div class="LogIn-Container">
-    <h1 class="LogIn-Welcome"> Log in Hjælp</h1>
-    <div class="LogIn-Intro">
-        <p>Vi har her samlet en råkke gode råd <br />
-            til at løse eventuelle problemmer med at kunne logge in <br />
-        </p>
+<body id="top">
+    <div class="LogIn-Sidebar">
+        <a href="#top">Tilbage til toppen</a>
+        <a href="#l1">Cache</a>
+        <a href="#l2">Password</a>
+        <a href="#l3">Email</a>
+        <a href="#l4">Support</a>
+        <a href="#l5">Cache</a>
+        <a href="#l6">Udbyder</a>
+        <a href="#l7">Router</a>
+        <a href="#l8">Ris</a>
     </div>
-</div>
+    <div class="LogIn-Container">
+        <h1 class="LogIn-Welcome"> Log in Hjælp</h1>
+        <div class="LogIn-Intro">
+            <p>
+                Vi har her samlet en række gode råd <br />
+                til at løse eventuelle problemmer med at kunne logge in <br />
+            </p>
+
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+
+        @*Cache*@
+        <div id="l1">
+            <h1 class="LogIn-Answer">Ryd cache</h1>
+            <p style="font-size: 14px;">
+                Et godt sted at starte hvis man oplever problemer med at kunne logge ind, eller bare problemer generelt, er at rydde sin cache <br />
+                Dette kan gøres på følgende måder: <br />
+            </p>
+            <ul style="font-size: 14px;">
+                <li style="margin-bottom: 30px;">ctrl + h -> Ryd browserdata -> Marker "Billeder og filer, der er gemt i cache" og vælg "Alle browserdata" i tidsintervallet.</li>
+                <li>Næsten øverst i højre hjørne klik på de 3 prikker, herefter vælg historik og følg instruktionerne fra ovenstående punkt</li>
+            </ul>
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+
+        @*Password*@
+        <div id="l2">
+            <h1 class="LogIn-Answer">Tjek kodeord</h1>
+            <p style="font-size: 14px;">
+                Vi står til rådighed for at hjælpe dig, <br /> men forinden du tager kontakt til os, tjek da venligst at dit kodeord faktisk er korrekt <br />
+            </p>
+            <p style="font-size: 14px;">Hvis du har glemt dit kode ord kan du nulstille det og få et nyt tilsendt <a href="@Url.Action("ForgotPassword", "Account")">her</a></p>
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+
+        @*Email*@
+        <div id="l3">
+            <h1 class="LogIn-Answer">Tjek email</h1>
+            <p style="font-size: 14px;">
+                Vi står til rådighed for at hjælpe dig, <br /> men forinden du tager kontakt til os, tjek da venligst at din email er korrekt indtastet <br />
+            </p>
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+
+        @*Support*@
+        <div id="l4">
+            <h1 class="LogIn-Answer">Kontakt vores support</h1>
+            <p style="font-size: 14px;">
+                Vi står til rådighed for at hjælpe dig, <br /> du kan kontakte os på følgende måder: <br />
+            </p>
+            <a href="mailto:lasseduus@live.dk" style="font-size: 14px;">Email</a> <br />
+            <a style="font-size: 14px;">Telefon: 40 35 97 33</a>
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+
+        @*Cache*@
+        <div id="l5">
+            <h1 class="LogIn-Answer">Ryd cache</h1>
+            <p style="font-size: 14px;">
+                Et godt sted at starte hvis man oplever problemer med at kunne logge ind, eller bare problemer generelt, er at rydde sin cache <br />
+                Dette kan gøres på følgende måder: <br />
+            </p>
+            <ul style="font-size: 16px;">
+                <li style="margin-bottom: 30px">ctrl + h -> Ryd browserdata -> Marker "Billeder og filer, der er gemt i cache" og vælg "Alle browserdata" i tidsintervallet.</li>
+                <li>Næsten øverst i højre hjørne klik på de 3 prikker, herefter vælg historik og følg instruktionerne fra ovenstående punkt</li>
+            </ul>
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+
+        @*Udbyder*@
+        <div id="l6">
+            <h1 class="LogIn-Answer">Kontakt din internet udbyder</h1>
+            <p style="font-size: 14px;">
+                Undersøg om du har adgang til andre hjemmesider, hvis ikke så ved jeg ikke hvordan du læser det her, <br />
+                men kontakt din udbyder og hør om de har nogle problemer
+            </p>
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+        
+        @*Router*@
+        <div id="l7">
+            <h1 class="LogIn-Answer">Genstart router</h1>
+            <p style="font-size: 14px;">
+                Hvis du har mistet din internet forbindelse, prøv da at genstarte din router <br />
+                dette gør du ved at slukke for strømmen til den og vente i 10 sekunder <br />
+                herefter slutter du den til strøm igen, dit wifi skulle vende tilbage indenfor 10 minutter
+            </p>
+        </div>
+        <div class="Breaker">___________________________________________________________________</div>
+
+        @*Ris*@
+        <div id="l8">
+            <h1 class="LogIn-Answer">Put den i ris</h1>
+            <p style="font-size: 14px;">
+                Hvis intet andet har indtil nu har virket, anbefaler vi at du kommer den i ris og lader den stå i 48 timer<br />
+            </p>
+        </div>
+    </div>
+</body>
 

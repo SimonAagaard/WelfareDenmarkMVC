@@ -1,12 +1,12 @@
-@model TwoFactorAuthenticationViewModel
+ï»¿@model TwoFactorAuthenticationViewModel
 @{
-    ViewData["Title"] = "To trins bekræftigelse";
+    ViewData["Title"] = "To trins bekrÃ¦ftigelse";
     ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
 }
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="Stylesheet" type="text/css" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css">
-    @*Lidt hygge font som gør damerne glade*@
+    @*Lidt hygge font som gï¿½r damerne glade*@
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
     <script type="text/javascript" src="js/site.js"></script>
     </head>
@@ -40,10 +40,10 @@
     <a asp-action="GenerateRecoveryCodesWarning" class="btn btn-default">Reset recovery codes</a>
 }
 
-<h5>Her kan du tilføje To trins bekræftigelse</h5>
+<h5>Her kan du tilfÃ¸je To trins bekrÃ¦ftigelse</h5>
 @if (!Model.HasAuthenticator)
 {
-    <a asp-action="EnableAuthenticator" class="btn btn-default">Tilføj</a>
+    <a asp-action="EnableAuthenticator" class="btn btn-default">TilfÃ¸j</a>
 }
 else
 {
