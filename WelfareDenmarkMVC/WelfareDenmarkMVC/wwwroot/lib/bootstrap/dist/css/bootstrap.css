@@ -6898,31 +6898,54 @@ button.close {
 
 
 /*Styling for Donations page*/
+#Dontation-body {
+    background-image: url('http://theshoppersweekly.com/wp-content/uploads/2018/06/donation.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .Donations-Welcome {
+    background-image: url('https://artsound.fm/wp-content/uploads/ngg_featured/donate.png');
+
+    background-repeat: no-repeat;
+    margin-right: 10px;
     padding-top: 100px;
     padding-bottom: 100px;
-    font-size: 50px;
+    background-position: right;
+    background-size: 30%; 
+    font-size: 75px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
     color: black;
     text-align: center;
-    border-bottom: 5px solid #000000;
+    border-bottom: 3px solid #000000;
 }
 
 .Donations-Container {
+    margin-top: 10px;
     font-size: 24px;
     font-weight: bolder;
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
+   
+    border-radius: 3px;
+    border-color: black;
+    border-style: groove;
+    background-color: white;
+}
+.Donation-answer{
+    font-size: 14px;
+   
 }
 
+/*Styling for the FAQ*/
 #Faq-Body {
     background-image: url('http://waleshealthcare.com/wp-content/uploads/2017/06/dementia.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
 }
-/*Styling for the FAQ*/
+
 .Faq-Welcome {
     padding-top: 100px;
     background-image: url('https://digitalphone.io/wp-content/uploads/2018/03/FAQ.png');
@@ -7008,6 +7031,7 @@ button.close {
     text-align: center;
     background-color: #f7f9fa;
 }
+
 /*Styling for LogInSupport page*/
 .LogIn-Welcome {
     padding-top: 100px;
@@ -7049,6 +7073,7 @@ button.close {
     padding-top: 45px;
    
 }
+
 .LogIn-Sidebar a {
     font-family: 'Crete Round', serif;
     padding: 6px 8px 6px 16px;
@@ -7139,6 +7164,7 @@ button.close {
     position: relative;
     display: inline-block;
     color: #3366BB;
+    
 }
 
     .Security-Tooltip .Security-TooltipText {
@@ -7166,6 +7192,7 @@ button.close {
         border-width: 5px;
         border-style: solid;
         border-color: #555 transparent transparent transparent;
+        animation-delay: 1s;
         
     }
     .Security-Tooltip:hover .Security-TooltipText {
