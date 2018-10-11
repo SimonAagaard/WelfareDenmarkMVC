@@ -6758,30 +6758,40 @@ button.close {
 }
 
 /*Contact page styling */
+#Contact-body {
+    background-image: url('http://theshoppersweekly.com/wp-content/uploads/2018/06/donation.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.Contact-Container {
+    border-radius: 50%;
+    margin-top: 200px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255, 0.8)    ;
+    line-height: 1.65;
+    padding-bottom: 110px;
+    border:3px solid black;
+}
 .Contact-Welcome {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
     font-size: 50px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
     color: black;
     text-align: center;
-    border-bottom: 5px solid #000000;
-}
 
-.Contact-Container {
-    box-sizing: border-box;
-    background-color: #f7f9fa;
-    line-height: 1.65;
-    background-image: url("https://images.unsplash.com/photo-1503249023995-51b0f3778ccf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9df0dd21ec52afa496c963a48da2d287&auto=format&fit=crop&w=1822&q=80");
-    background-size: cover;
-    
 }
 
 .Contact-Options-Container {
+    
+    margin-left: 20px;
+    
+    width: 1100px;
+    border-bottom-color: black;
     overflow: auto;
-    margin-top: 100px;
-
+    margin-top: 50px;
 }
 .Contact-Options {
     float: left;
@@ -6792,6 +6802,7 @@ button.close {
     margin-top: 10px;
     margin-left: 100px;
     margin-bottom:20px;
+    border: 1px solid black;
     border-radius: 5%;  
 }
 .Contact-Options-Image {
@@ -6847,18 +6858,19 @@ button.close {
 /* front, with logo */
 .Call-Front {
     z-index: 2;
-   
+    border: 1px solid black;
     transform: rotateY(0deg);
     float: left;
     width: 150px;
     height: 150px;
     background-color: rgb(118, 127, 122);
     background-color: rgba(118, 127, 122, 0.4);
-    border-radius: 5%;  
+    border-radius: 5%;
 }
 
 /* back, with number, initially hidden*/
 .Call-Back {
+    border: 1px solid black;
     transform: rotateY(180deg);
     font-size: 26px;
     font-weight: bolder;
@@ -6866,7 +6878,7 @@ button.close {
     height: 150px;
     background-color: rgb(118, 127, 122);
     background-color: rgba(118, 127, 122, 0.4);
-    border-radius: 5%;  
+    border-radius: 5%;
     padding-top: 35px;
 }
 
@@ -7158,13 +7170,22 @@ button.close {
 
 .Security-Information {
     font-size: 16px;
+    border-bottom: 2px gray solid;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.Security-Updates {
+    font-size: 16px;
+    border-bottom: 2px gray solid;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .Security-Tooltip {
     position: relative;
     display: inline-block;
     color: #3366BB;
-    
 }
 
     .Security-Tooltip .Security-TooltipText {
@@ -7198,6 +7219,13 @@ button.close {
     .Security-Tooltip:hover .Security-TooltipText {
         visibility: visible;
         opacity:1;
+    }
+    .Security-Animations {
+        border-radius: 50%;
+        width: 200px;
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 50px;
     }
 
 
