@@ -6917,12 +6917,13 @@ button.close {
     text-align: center;
 }
 
+/*Styling for the FAQ*/
 #Faq-Body {
     background-image: url('http://waleshealthcare.com/wp-content/uploads/2017/06/dementia.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
 }
-/*Styling for the FAQ*/
+
 .Faq-Welcome {
     padding-top: 100px;
     background-image: url('https://digitalphone.io/wp-content/uploads/2018/03/FAQ.png');
@@ -7008,6 +7009,7 @@ button.close {
     text-align: center;
     background-color: #f7f9fa;
 }
+
 /*Styling for LogInSupport page*/
 .LogIn-Welcome {
     padding-top: 100px;
@@ -7049,6 +7051,7 @@ button.close {
     padding-top: 45px;
    
 }
+
 .LogIn-Sidebar a {
     font-family: 'Crete Round', serif;
     padding: 6px 8px 6px 16px;
@@ -7139,6 +7142,7 @@ button.close {
     position: relative;
     display: inline-block;
     color: #3366BB;
+    
 }
 
     .Security-Tooltip .Security-TooltipText {
@@ -7166,6 +7170,7 @@ button.close {
         border-width: 5px;
         border-style: solid;
         border-color: #555 transparent transparent transparent;
+        animation-delay: 1s;
         
     }
     .Security-Tooltip:hover .Security-TooltipText {
