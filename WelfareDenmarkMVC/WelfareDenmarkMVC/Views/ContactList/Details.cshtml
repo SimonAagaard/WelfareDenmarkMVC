@@ -1,0 +1,32 @@
+﻿@model WelfareDenmarkMVC.Models.ContactListViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>
+	Detaljer om kontaktpersonen @Html.DisplayFor(model => model.FullName)
+</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ContactID">Redigér</a> |
+    <a asp-action="Index">Tilbage til kontakter</a>
+</div>

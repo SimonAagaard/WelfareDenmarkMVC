@@ -25,13 +25,14 @@
 </a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Om os</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="RemoveDementia">FjernDemens</a></li>
-                    <li><a asp-area="" asp-controller="Location" asp-action="Location">Find Mig</a></li>
-                    <li><a asp-area="" asp-controller="ChecklistViewModels" asp-action="Index">Min huskeliste</a></li>
-                </ul>
+				<ul class="nav navbar-nav">
+					<li><a asp-area="" asp-controller="Home" asp-action="About">Om os</a></li>
+					<li><a asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a></li>
+					<li><a asp-area="" asp-controller="Home" asp-action="RemoveDementia">FjernDemens</a></li>
+					<li><a asp-area="" asp-controller="Location" asp-action="Location">Find Mig</a></li>
+					<li><a asp-area="" asp-controller="ChecklistViewModels" asp-action="Index">Min huskeliste</a></li>
+
+				</ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>

@@ -7,7 +7,7 @@
 <h2>Dine kontakter</h2>
 
 <p>
-	<a asp-controller="ContactList" asp-action="Create">Opret ny kontakt</a>
+	<a asp-action="Create">Opret ny kontakt</a>
 </p>
 <table class="table">
 	<thead>
@@ -32,12 +32,16 @@
 					@Html.DisplayFor(modelItem => item.PhoneNumber)
 				</td>
 				<td>
-					<a asp-controller="ContactList" asp-action="Edit" asp-route-id="@item.ContactID">Redigér</a> |
-					<a asp-controller="ContactList" asp-action="Details" asp-route-id="@item.ContactID">Detaljer</a> |
-					<a asp-controller="ContactList" asp-action="Delete" asp-route-id="@item.ContactID">Slet</a>
+					<a asp-action="Edit" asp-route-id="@item.ContactID">Redigér</a> |
+					<a asp-action="Details" asp-route-id="@item.ContactID">Detaljer</a> |
+					<a asp-action="Delete" asp-route-id="@item.ContactID">Slet</a>
 				</td>
 			</tr>
 		}
 	</tbody>
 </table>
+
+<p>
+	@Html.ActionLink("Tilbage", "ContactPersons", "Manage", new { }, new { })
+</p>
 
