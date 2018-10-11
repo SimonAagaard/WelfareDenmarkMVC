@@ -1,27 +1,47 @@
-﻿@model IndexViewModel
+﻿@model IEnumerable<WelfareDenmarkMVC.Models.ContactListViewModel>
 
 @{
-	ViewData["Title"] = "Dine kontakter ";
-	ViewData.AddActivePage(ManageNavPages.ContactPersons);
+	ViewData["Title"] = "Index";
 }
 
-<h4>@ViewData["Title"]</h4>
-
-
-
-
-<div class="checkList">
-	@{
-		await Html.RenderPartialAsync("_CreateContactPartial", new ContactListViewModel());
-	}
-</div>
-
+<h2>Dine kontakter</h2>
 
 <p>
-	@Html.ActionLink("Mine kontakter", "Index", "ContactList", new { }, new { })
+	<a asp-controller="ContactList" asp-action="Create">Opret ny kontakt</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.FullName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.PhoneNumber)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.FullName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.PhoneNumber)
+				</td>
+				<td>
+					<a asp-action="Edit" asp-route-id="@item.ContactID">Redigér</a> |
+					<a asp-action="Details" asp-route-id="@item.ContactID">Detaljer</a> |
+					<a asp-action="Delete" asp-route-id="@item.ContactID">Slet</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<p>
+	@Html.ActionLink("Tilbage", "ContactPersons", "Manage", new { }, new { })
 </p>
 
-
-@section Scripts {
-	@await Html.PartialAsync("_ValidationScriptsPartial")
-}
