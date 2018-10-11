@@ -1,37 +1,19 @@
 ﻿@model IndexViewModel
+
 @{
-    ViewData["Title"] = "Dine kontakter ";
-    ViewData.AddActivePage(ManageNavPages.ContactPersons);
+	ViewData["Title"] = "Dine kontakter ";
+	ViewData.AddActivePage(ManageNavPages.ContactPersons);
 }
 
 <h4>@ViewData["Title"]</h4>
 
-<div class="contact-person-container">
 
-    <div class="contact-left">
-        <div class="contact-person-image">
-
-        </div>
-    </div>
-
-    <div class="contact-right">
-        <div class="contact-person-name">
-            <p id="contact-name-text"><b>Doktor Johnny</b></p>
-        </div>
-
-        <div class="contact-person-phone">
-            <p id="contact-phone-text">34 53 24 32</p>
-        </div>
-    </div>
+<div class="checkList">
+	@{
+		await Html.RenderPartialAsync("_CreateContactPartial", new ContactListViewModel());
+	}
 </div>
 
-<br /><br />
-
-<button id="clickme">Tilføj kontakt</button>
-
-<button id="counterBtn"></button>
-
-
 @section Scripts {
-    @await Html.PartialAsync("_ValidationScriptsPartial")
+	@await Html.PartialAsync("_ValidationScriptsPartial")
 }

@@ -25,5 +25,8 @@ namespace WelfareDenmarkMVC.Data
         }
 
         public DbSet<WelfareDenmarkMVC.Models.AccountViewModels.ChecklistViewModel> ChecklistViewModel { get; set; }
-    }
+
+		public DbSet<ContactListViewModel> Contacts { get; set; }
+
+	}
 }
