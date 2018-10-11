@@ -8,6 +8,7 @@ namespace WelfareDenmarkMVC.Models.AccountViewModels
 {
     public class ChecklistViewModel
     {
+        
         public string ChecklistItem { get; set; }
         [Key]
         public int Id { get; set; }
