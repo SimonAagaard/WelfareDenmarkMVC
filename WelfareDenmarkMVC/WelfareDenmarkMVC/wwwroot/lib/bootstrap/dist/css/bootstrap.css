@@ -7170,13 +7170,22 @@ button.close {
 
 .Security-Information {
     font-size: 16px;
+    border-bottom: 2px gray solid;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.Security-Updates {
+    font-size: 16px;
+    border-bottom: 2px gray solid;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .Security-Tooltip {
     position: relative;
     display: inline-block;
     color: #3366BB;
-    
 }
 
     .Security-Tooltip .Security-TooltipText {
@@ -7210,6 +7219,13 @@ button.close {
     .Security-Tooltip:hover .Security-TooltipText {
         visibility: visible;
         opacity:1;
+    }
+    .Security-Animations {
+        border-radius: 50%;
+        width: 200px;
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 50px;
     }
 
 
