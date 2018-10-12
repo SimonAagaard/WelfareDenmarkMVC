@@ -7021,7 +7021,7 @@ button.close {
 
 /*Styling for KeyTerms page*/
 #KeyTerms-Body {
-    background-image: url('https://images.unsplash.com/photo-1503248947681-3198a7abfcc9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63523cc4e34d8b0ed1dd7723b52636a1&auto=format&fit=crop&w=700&q=80');
+    background-image: url('https://images.unsplash.com/photo-1533094666476-13a62ed84076?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6546a697ce3429e6ed684bed289acb46&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -7032,9 +7032,9 @@ button.close {
     font-size: 50px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
-    color: black;
-    text-align: center;
-    border-bottom: 5px solid #000000;
+    color: white;
+    text-align: center;   
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
 }
 
 .Key-Container {
@@ -7048,6 +7048,9 @@ button.close {
 .Key-Text {
     font-size: 18px;
     font-weight: normal;
+    border-radius: 5%;
+    background-color: rgba(255,255,255, 0.6);
+    border: 3px solid black
 }
 
 /*Styling for LogInSupport page*/
