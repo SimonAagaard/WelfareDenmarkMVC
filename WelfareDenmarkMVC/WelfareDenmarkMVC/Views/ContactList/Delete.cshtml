@@ -4,19 +4,19 @@
     ViewData["Title"] = "Delete";
 }
 
-<h2>
+<h3>
 	Er du sikker på, at du vil slette kontaktpersonen @Html.DisplayFor(model => model.FullName)?
-</h2>
+</h3>
 
 <div>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="">
         <dt>
             @Html.DisplayNameFor(model => model.FullName)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.FullName)
-        </dd>
+        </dd><br />
         <dt>
             @Html.DisplayNameFor(model => model.PhoneNumber)
         </dt>

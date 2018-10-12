@@ -335,3 +335,24 @@
 	font-size: 20px;
 }
 
+.contact-list-item {
+    height: 20px;
+}
+
+    .contact-list-item:hover {
+        background-color: #f2f2f2;
+    }
+
+.contact-list-item-text {
+    margin-top: 20px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.contact-list-headline-row {
+    background-color: #f9f9f9;
+}
+
+#create-new-contact {
+    color: black;
+}
