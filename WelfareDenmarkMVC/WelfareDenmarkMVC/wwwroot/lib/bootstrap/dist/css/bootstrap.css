@@ -7039,12 +7039,9 @@ button.close {
     font-size: 24px;
     font-weight: bolder;
     font-family: 'Crete Round', serif;
+    align-content: center;
+    text-align: center;
     background-color: #f7f9fa;
-}
-
-.Key-Text {
-    font-size: 18px;
-    font-weight: normal;
 }
 
 /*Styling for LogInSupport page*/
@@ -7138,14 +7135,20 @@ button.close {
     width: 300px;
 }
 
-/*Styling for Security page*/ 
+/*Styling for Security page*/
+#Security-body {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .Security-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
     font-size: 50px;
     font-weight: 400;
-    font-family: 'Crete Round', serif;
-    color: black;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     text-align: center;
     border-bottom: 5px solid #000000;
 }
@@ -7164,6 +7167,8 @@ button.close {
     margin-top: 50px;
     margin-bottom: 50px;
     font-weight: bolder;
+    background-color: ghostwhite;
+    border: 3px solid black
 }
 
 .Security-Image {
@@ -7176,6 +7181,8 @@ button.close {
     border-bottom: 2px gray solid;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: ghostwhite;
+    border: 3px solid black
 }
 
 .Security-Updates {
@@ -7183,6 +7190,8 @@ button.close {
     border-bottom: 2px gray solid;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: ghostwhite;
+    border: 3px solid black
 }
 
 .Security-Tooltip {
@@ -7238,35 +7247,5 @@ button.close {
     font-weight: bolder;
     font-family: 'Crete Round', serif;
 }
-
-/*Styling for News page*/
-.News-Welcome {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    font-size: 50px;
-    font-weight: 400;
-    font-family: 'Crete Round', serif;
-    color: black;
-    text-align: center;
-    border-bottom: 5px solid #000000;
-}
-
-.News-Container {
-    font-size: 24px;
-    font-weight: bolder;
-    font-family: 'Crete Round', serif;
-    align-content: center;
-    text-align: center;
-}
-
-.News-Image {
-    margin-top: 50px;
-    width: 1000px;
-    height: 200px;
-    margin-bottom: 50px;
-    
-}
-
-
 
 /*# sourceMappingURL=bootstrap.css.map */
