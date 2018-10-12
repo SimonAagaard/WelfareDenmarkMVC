@@ -7135,14 +7135,20 @@ button.close {
     width: 300px;
 }
 
-/*Styling for Security page*/ 
+/*Styling for Security page*/
+#Security-body {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .Security-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
     font-size: 50px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
-    color: black;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     text-align: center;
     border-bottom: 5px solid #000000;
 }
@@ -7161,6 +7167,8 @@ button.close {
     margin-top: 50px;
     margin-bottom: 50px;
     font-weight: bolder;
+    background-color: ghostwhite;
+    border: 3px solid black
 }
 
 .Security-Image {
@@ -7173,6 +7181,8 @@ button.close {
     border-bottom: 2px gray solid;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: ghostwhite;
+    border: 3px solid black
 }
 
 .Security-Updates {
@@ -7180,6 +7190,8 @@ button.close {
     border-bottom: 2px gray solid;
     margin-top: 50px;
     margin-bottom: 50px;
+    background-color: ghostwhite;
+    border: 3px solid black
 }
 
 .Security-Tooltip {
