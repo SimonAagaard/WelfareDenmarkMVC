@@ -6911,7 +6911,7 @@ button.close {
 
 /*Styling for Donations page*/
 #Dontation-body {
-    background-image: url('http://theshoppersweekly.com/wp-content/uploads/2018/06/donation.jpg');
+    background-image: url('https://cdn.discordapp.com/attachments/364354480541794315/500217238066823175/photo-1531816466008-90e3a4b01450.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -7149,7 +7149,7 @@ button.close {
 
 /*Styling for Security page*/
 #Security-body {
-    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+    background-image: url('https://images.unsplash.com/photo-1509804041229-d0e9abbf44ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eeb2f7b6663c016c6a04baac5d58aeb2&auto=format&fit=crop&w=1353&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -7179,12 +7179,12 @@ button.close {
     margin-top: 50px;
     margin-bottom: 50px;
     font-weight: bolder;
-    background-color: ghostwhite;
+    background-color: rgba(255,255,255, 0.6);
     border: 3px solid black
 }
 
 .Security-Image {
-    width: 300px;
+    width: 300px; 
     margin-bottom:50px;
 }
 
@@ -7193,7 +7193,7 @@ button.close {
     border-bottom: 2px gray solid;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: ghostwhite;
+    background-color: rgba(255,255,255, 0.6);
     border: 3px solid black
 }
 
@@ -7202,7 +7202,7 @@ button.close {
     border-bottom: 2px gray solid;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: ghostwhite;
+    background-color: rgba(255,255,255, 0.6);
     border: 3px solid black
 }
 
@@ -7299,3 +7299,43 @@ button.close {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
+
+.hover_lochelp {
+    position: relative;
+    display: inline-block;
+    color: #3366BB;
+}
+
+    .hover_lochelp .hover_lochelpimg {
+        visibility: hidden;
+        width: auto;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        .hover_lochelp .hover_lochelpimg::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+            animation-delay: 1s;
+        }
+
+    .hover_lochelp:hover .hover_lochelpimg {
+        visibility: visible;
+        opacity: 1;
+    }
