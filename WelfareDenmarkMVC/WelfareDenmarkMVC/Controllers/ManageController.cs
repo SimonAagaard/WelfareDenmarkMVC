@@ -67,7 +67,8 @@ namespace WelfareDenmarkMVC.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
-                StatusMessage = StatusMessage
+                StatusMessage = StatusMessage,
+                Address = user.Address
             };
 
             return View(model);
@@ -83,6 +84,8 @@ namespace WelfareDenmarkMVC.Controllers
             }
 
             var user = await _userManager.GetUserAsync(User);
+            user.Address = model.Address;
+
             if (user == null)
             {
                 throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
@@ -107,6 +110,8 @@ namespace WelfareDenmarkMVC.Controllers
                     throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
                 }
             }
+
+            await _userManager.UpdateAsync(user);
 
             StatusMessage = "Din profil blev opdateret";
             return RedirectToAction(nameof(Index));
