@@ -7017,13 +7017,15 @@ button.close {
     text-align: center;
     margin-left: 200px;
 }
-#top {
-    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+
+
+/*Styling for KeyTerms page*/
+#KeyTerms-Body {
+    background-image: url('https://images.unsplash.com/photo-1503248947681-3198a7abfcc9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63523cc4e34d8b0ed1dd7723b52636a1&auto=format&fit=crop&w=700&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/*Styling for KeyTerms page*/
 .Key-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -7041,7 +7043,6 @@ button.close {
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
-    background-color: #f7f9fa;
 }
 
 .Key-Text {
@@ -7050,6 +7051,12 @@ button.close {
 }
 
 /*Styling for LogInSupport page*/
+#top {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .LogIn-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -7266,8 +7273,8 @@ button.close {
 }
 
 .News-Container {
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: 14px;
+    padding: 20px;
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
@@ -7278,6 +7285,17 @@ button.close {
     width: 1000px;
     height: 200px;
     margin-bottom: 50px;
+}
+
+.News-Post {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.News-PostImage {
+    width: 450px;
+    height: 300px;
+    padding: 20px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
