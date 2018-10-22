@@ -1,28 +1,26 @@
 ﻿@model WelfareDenmarkMVC.Models.AccountViewModels.ChecklistViewModel
 
 @{
-	ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Delete";
 }
 
 <h2>Slet</h2>
 
 <h3>Er du sikker på at du vil slette dette?</h3>
 <div>
-	<h4>Huskeliste</h4>
-	<hr />
-	<dl class="dl-horizontal">
-		<dt>
-			Huskeliste indlæg:
-		</dt>
-		<dd>
-			@Html.DisplayFor(model => model.ChecklistItem)
-		</dd>
-	</dl>
-
-	<form asp-action="Delete">
-		<label asp-for="ChecklistItem"></label>
-		<input type="text" asp-for="Email" />
-		<input type="submit" value="Slet indlæg" class="btn btn-default" /> |
-		<a asp-action="Index">Tilbage til huskeliste</a>
-	</form>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Huskeliste indlæg: 
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChecklistItem)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Slet indlæg" class="btn btn-default" /> |
+        <a asp-action="Index">Tilbage til huskeliste</a>
+    </form>
 </div>

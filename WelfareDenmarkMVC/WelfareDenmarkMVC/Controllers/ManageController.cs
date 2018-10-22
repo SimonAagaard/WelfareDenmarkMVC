@@ -30,7 +30,7 @@ namespace WelfareDenmarkMVC.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
-		private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         private IHostingEnvironment _env;
 
@@ -44,7 +44,7 @@ namespace WelfareDenmarkMVC.Controllers
           IEmailSender emailSender,
           ILogger<ManageController> logger,
           UrlEncoder urlEncoder,
-		  ApplicationDbContext context,
+          ApplicationDbContext context,
           IHostingEnvironment env)
         {
             _userManager = userManager;
@@ -52,7 +52,7 @@ namespace WelfareDenmarkMVC.Controllers
             _emailSender = emailSender;
             _logger = logger;
             _urlEncoder = urlEncoder;
-			_context = context;
+            _context = context;
             _env = env;
         }
 
@@ -168,19 +168,19 @@ namespace WelfareDenmarkMVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Gallery(UploadImageViewModel uivm)
+        public IActionResult Gallery(UploadImageViewModel uivm)
         {
             return View();
         }
 
         [HttpGet]
-        public async Task<IActionResult> Medicine()
+        public IActionResult Medicine()
         {
             return View();
         }
 
         [HttpGet]
-        public async Task<IActionResult> Calendar()
+        public IActionResult Calendar()
         {
             return View();
         }
@@ -188,12 +188,12 @@ namespace WelfareDenmarkMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> ContactPersons()
         {
-			return View(await _context.Contacts.ToListAsync());
-		}
+            return View(await _context.Contacts.ToListAsync());
+        }
 
 
 
-		[HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {
