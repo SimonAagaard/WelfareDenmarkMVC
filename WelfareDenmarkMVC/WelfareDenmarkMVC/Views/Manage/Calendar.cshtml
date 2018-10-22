@@ -1,12 +1,15 @@
 ﻿@model IndexViewModel
 @{
-    ViewData["Title"] = "Kalender";
-    ViewData.AddActivePage(ManageNavPages.Calendar);
+	ViewData["Title"] = "Kalender";
+	ViewData.AddActivePage(ManageNavPages.Calendar);
 }
 
 <h4>@ViewData["Title"]</h4>
 
 
 @section Scripts {
-    @await Html.PartialAsync("_ValidationScriptsPartial")
+	@await Html.PartialAsync("_ValidationScriptsPartial")
 }
+
+<script src="~/js/site.js"></script>
+
