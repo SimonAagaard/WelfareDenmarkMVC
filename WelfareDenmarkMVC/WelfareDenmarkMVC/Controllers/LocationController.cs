@@ -12,10 +12,5 @@ namespace WelfareDenmarkMVC.Controllers
         {
             return View();
         }
-
-        public IActionResult Location2()
-        {
-            return View();
-        }
     }
 }
