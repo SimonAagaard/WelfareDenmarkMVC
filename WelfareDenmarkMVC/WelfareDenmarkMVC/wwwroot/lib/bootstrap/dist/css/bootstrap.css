@@ -6785,9 +6785,7 @@ button.close {
 }
 
 .Contact-Options-Container {
-    
     margin-left: 20px;
-    
     width: 1100px;
     border-bottom-color: black;
     overflow: auto;
@@ -6805,6 +6803,7 @@ button.close {
     border: 1px solid black;
     border-radius: 5%;  
 }
+
 .Contact-Options-Image {
     width: 100px;
     height: 100px;
@@ -6815,7 +6814,6 @@ button.close {
     background-color: rgb(118, 127, 122);
     background-color: rgba(118, 127, 122, 0.8);
 }
-
 
 .Support-Text {
     color: #000000;
@@ -6828,8 +6826,8 @@ button.close {
     position: relative;
     -webkit-perspective: 1000px;
     perspective: 1000px;
-    
 }
+
 .Call-Flipper {
     width: 150px;
     height: 150px;
@@ -6842,9 +6840,8 @@ button.close {
     transition: 1s;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-   
-    
 }
+
 .Call-Flipper:hover {
     transform: rotateY( 180deg );
     -webkit-transform: rotateY(180deg);
@@ -6908,7 +6905,6 @@ button.close {
         -webkit-transform: rotateY(180deg);
     }
 
-
 /*Styling for Donations page*/
 #Dontation-body {
     background-image: url('https://cdn.discordapp.com/attachments/364354480541794315/500217238066823175/photo-1531816466008-90e3a4b01450.png');
@@ -6918,7 +6914,6 @@ button.close {
 
 .Donations-Welcome {
     background-image: url('https://artsound.fm/wp-content/uploads/ngg_featured/donate.png');
-
     background-repeat: no-repeat;
     margin-right: 10px;
     padding-top: 100px;
@@ -6940,7 +6935,6 @@ button.close {
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
-   
     border-radius: 3px;
     border-color: black;
     border-style: groove;
@@ -6948,7 +6942,6 @@ button.close {
 }
 .Donation-answer{
     font-size: 14px;
-   
 }
 
 /*Styling for the FAQ*/
@@ -7007,7 +7000,6 @@ button.close {
     align-content: center;
     text-align: center;
     text-decoration: none;
-    
 }
 .Breaker {
     color: gray;
@@ -7017,22 +7009,24 @@ button.close {
     text-align: center;
     margin-left: 200px;
 }
-#top {
-    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+
+
+/*Styling for KeyTerms page*/
+#KeyTerms-Body {
+    background-image: url('https://images.unsplash.com/photo-1533094666476-13a62ed84076?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6546a697ce3429e6ed684bed289acb46&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/*Styling for KeyTerms page*/
 .Key-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
     font-size: 50px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
-    color: black;
-    text-align: center;
-    border-bottom: 5px solid #000000;
+    color: white;
+    text-align: center;   
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
 }
 
 .Key-Container {
@@ -7041,15 +7035,23 @@ button.close {
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
-    background-color: #f7f9fa;
 }
 
 .Key-Text {
     font-size: 18px;
     font-weight: normal;
+    border-radius: 5%;
+    background-color: rgba(255,255,255, 0.6);
+    border: 3px solid black
 }
 
 /*Styling for LogInSupport page*/
+#top {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/beautiful-mountain-sunset-winter-mountain-landscape-inspiration-motivation-beauty-of-nature-travel-exploration-aerial-flight-uhd-4k_4uijpzfhe__F0000.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .LogIn-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -7067,7 +7069,6 @@ button.close {
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
-  
     margin-top: 10px;
     box-sizing: border-box;
     background-color: white;
@@ -7088,7 +7089,6 @@ button.close {
     background-color: #222;
     overflow-x: hidden;
     padding-top: 45px;
-   
 }
 
 .LogIn-Sidebar a {
@@ -7146,6 +7146,7 @@ button.close {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .Security-Welcome {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -7177,8 +7178,8 @@ button.close {
 }
 
 .Security-Image {
-    width: 300px; 
-    margin-bottom:50px;
+    width: 300px;
+    margin-bottom: 50px;
 }
 
 .Security-Information {
@@ -7207,7 +7208,7 @@ button.close {
 
     .Security-Tooltip .Security-TooltipText {
         visibility: hidden;
-        width:auto ;
+        width: auto;
         background-color: #555;
         color: #fff;
         text-align: center;
@@ -7221,29 +7222,32 @@ button.close {
         opacity: 0;
         transition: opacity 0.3s;
     }
-    .Security-Tooltip .Security-TooltipText::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-        animation-delay: 1s;
-        
-    }
+
+        .Security-Tooltip .Security-TooltipText::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+            animation-delay: 1s;
+        }
+
     .Security-Tooltip:hover .Security-TooltipText {
         visibility: visible;
-        opacity:1;
+        opacity: 1;
     }
-    .Security-Animations {
-        border-radius: 50%;
-        width: 200px;
-        display: inline-block;
-        margin-top: 15px;
-        margin-bottom: 50px;
-    }
+
+.Security-Animations {
+    border-radius: 50%;
+    width: 200px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
 
 
 /*Styling for DeleteAccount page*/
@@ -7254,20 +7258,24 @@ button.close {
 }
 
 /*Styling for News page*/
+#News-Body {
+    background-image: url(' https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae2d32767e7488a5e5cb070c4457b519&auto=format&fit=crop&w=1350&q=80');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 .News-Welcome {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 75px;
     font-weight: 400;
     font-family: 'Crete Round', serif;
     color: black;
     text-align: center;
-    border-bottom: 5px solid #000000;
 }
 
 .News-Container {
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: 14px;
+    padding: 20px;
     font-family: 'Crete Round', serif;
     align-content: center;
     text-align: center;
@@ -7278,6 +7286,19 @@ button.close {
     width: 1000px;
     height: 200px;
     margin-bottom: 50px;
+}
+
+.News-Post {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: rgba(255,255,255, 0.6);
+    border: 4px double black;
+}
+
+.News-PostImage {
+    width: 450px;
+    height: 300px;
+    padding: 20px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

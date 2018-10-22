@@ -20,6 +20,8 @@ namespace WelfareDenmarkMVC.Models.ManageViewModels
         [Display(Name = "Dit telefonnummer")]
         public string PhoneNumber { get; set; }
 
+        public string Address { get; set; }
+
         public string StatusMessage { get; set; }
     }
 }
