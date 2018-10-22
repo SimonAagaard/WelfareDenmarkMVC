@@ -8,6 +8,7 @@ namespace WelfareDenmarkMVC.Controllers
 {
     public class LocationController : Controller
     {
+        [Route("[controller]/[action]")]
         public IActionResult Location()
         {
             return View();

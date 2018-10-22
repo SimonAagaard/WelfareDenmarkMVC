@@ -10,6 +10,7 @@ using WelfareDenmarkMVC.Models.AccountViewModels;
 
 namespace WelfareDenmarkMVC.Controllers
 {
+    [Route("[controller]/[action]")]
     public class ChecklistViewModelsController : Controller
     {
         private readonly ApplicationDbContext _context;
