@@ -11,7 +11,6 @@ using WelfareDenmarkMVC.Models;
 
 namespace WelfareDenmarkMVC.Controllers
 {
-    [Route("[controller]/[action]")]
     public class HomeController : Controller
     {
         //
