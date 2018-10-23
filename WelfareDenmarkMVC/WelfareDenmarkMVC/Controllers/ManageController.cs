@@ -15,6 +15,9 @@ using WelfareDenmarkMVC.Models.ManageViewModels;
 using WelfareDenmarkMVC.Services;
 using Microsoft.EntityFrameworkCore;
 using WelfareDenmarkMVC.Data;
+using WelfareDenmarkMVC.Models.AccountViewModels;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace WelfareDenmarkMVC.Controllers
 {
@@ -27,10 +30,12 @@ namespace WelfareDenmarkMVC.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
-		private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
+
+        private IHostingEnvironment _env;
 
 
-		private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
+        private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
         private const string RecoveryCodesKey = nameof(RecoveryCodesKey);
 
         public ManageController(
@@ -39,15 +44,17 @@ namespace WelfareDenmarkMVC.Controllers
           IEmailSender emailSender,
           ILogger<ManageController> logger,
           UrlEncoder urlEncoder,
-		  ApplicationDbContext context)
+          ApplicationDbContext context,
+          IHostingEnvironment env)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
             _urlEncoder = urlEncoder;
-			_context = context;
-		}
+            _context = context;
+            _env = env;
+        }
 
         [TempData]
         public string StatusMessage { get; set; }
@@ -161,19 +168,19 @@ namespace WelfareDenmarkMVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Gallery()
+        public IActionResult Gallery(UploadImageViewModel uivm)
         {
             return View();
         }
 
         [HttpGet]
-        public async Task<IActionResult> Medicine()
+        public IActionResult Medicine()
         {
             return View();
         }
 
         [HttpGet]
-        public async Task<IActionResult> Calendar()
+        public IActionResult Calendar()
         {
             return View();
         }
@@ -181,12 +188,12 @@ namespace WelfareDenmarkMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> ContactPersons()
         {
-			return View(await _context.Contacts.ToListAsync());
-		}
+            return View(await _context.Contacts.ToListAsync());
+        }
 
 
 
-		[HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {

@@ -1,12 +1,9 @@
-﻿@model IndexViewModel
-@{
-    ViewData["Title"] = "Galleri";
-    ViewData.AddActivePage(ManageNavPages.Gallery);
-}
-
+﻿
 <h4>@ViewData["Title"]</h4>
 
+<form name="form" action="/UploadImage" enctype="multipart/form-data" method="post">
+    <input id="files" name="files" type="file" multiple onchange="fileupload('files');" />
+</form>
 
-@section Scripts {
-    @await Html.PartialAsync("_ValidationScriptsPartial")
-}
+
+<script src="~/js/site.js"></script>

@@ -4,10 +4,10 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="../ChecklistViewModels/Create">
+        <form asp-controller="ChecklistViewModels" asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ChecklistItem" class="control-label" title="Huskeliste">Huskeliste</label>
+                <label asp-for="ChecklistItem" class="control-label" title="Huskeliste">Lav indlæg til huskeliste:</label>
                 <input asp-for="ChecklistItem" class="form-control" />
                 <span asp-validation-for="ChecklistItem" class="text-danger"></span>
             </div>

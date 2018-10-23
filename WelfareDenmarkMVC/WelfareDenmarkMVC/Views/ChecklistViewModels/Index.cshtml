@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 <h2>Huskeliste</h2>
+
 <p>
     <a asp-action="Create">Lav et nyt punkt til huskeliste</a>
 </p>
@@ -11,7 +13,7 @@
     <thead>
         <tr>
                 <th>
-                    <p>Huskeliste</p>
+                    Oversigt
                 </th>
             <th></th>
         </tr>
@@ -23,14 +25,11 @@
                 @Html.DisplayFor(modelItem => item.ChecklistItem)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Email">Redigér</a> |
-                <a asp-action="Details" asp-route-id="@item.Email">Detaljer</a> |
-                <a asp-action="Delete" asp-route-id="@item.Email">Slet</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Redigér</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Slet</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-<p>
-    @Html.ActionLink("Tilbage til profil", "Index", "Manage", new { }, new { })
-</p>

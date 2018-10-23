@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WelfareDenmarkMVC.Data;
 using WelfareDenmarkMVC.Models.AccountViewModels;
-using WelfareDenmarkMVC.Models.ManageViewModels;
 
 namespace WelfareDenmarkMVC.Controllers
 {
+    [Route("[controller]/[action]")]
     public class ChecklistViewModelsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,11 +24,10 @@ namespace WelfareDenmarkMVC.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.ChecklistViewModel.ToListAsync());
-            
         }
 
         // GET: ChecklistViewModels/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -36,7 +35,7 @@ namespace WelfareDenmarkMVC.Controllers
             }
 
             var checklistViewModel = await _context.ChecklistViewModel
-                .SingleOrDefaultAsync(m => m.Email == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (checklistViewModel == null)
             {
                 return NotFound();
@@ -56,7 +55,7 @@ namespace WelfareDenmarkMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ChecklistItem,Email")] ChecklistViewModel checklistViewModel)
+        public async Task<IActionResult> Create([Bind("ChecklistItem,Id")] ChecklistViewModel checklistViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -68,14 +67,14 @@ namespace WelfareDenmarkMVC.Controllers
         }
 
         // GET: ChecklistViewModels/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var checklistViewModel = await _context.ChecklistViewModel.SingleOrDefaultAsync(m => m.Email == id);
+            var checklistViewModel = await _context.ChecklistViewModel.SingleOrDefaultAsync(m => m.Id == id);
             if (checklistViewModel == null)
             {
                 return NotFound();
@@ -88,9 +87,9 @@ namespace WelfareDenmarkMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("ChecklistItem,Email")] ChecklistViewModel checklistViewModel)
+        public async Task<IActionResult> Edit(int id, [Bind("ChecklistItem,Id")] ChecklistViewModel checklistViewModel)
         {
-            if (id != checklistViewModel.Email)
+            if (id != checklistViewModel.Id)
             {
                 return NotFound();
             }
@@ -104,7 +103,7 @@ namespace WelfareDenmarkMVC.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ChecklistViewModelExists(checklistViewModel.Email))
+                    if (!ChecklistViewModelExists(checklistViewModel.Id))
                     {
                         return NotFound();
                     }
@@ -119,7 +118,7 @@ namespace WelfareDenmarkMVC.Controllers
         }
 
         // GET: ChecklistViewModels/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -127,7 +126,7 @@ namespace WelfareDenmarkMVC.Controllers
             }
 
             var checklistViewModel = await _context.ChecklistViewModel
-                .SingleOrDefaultAsync(m => m.Email == id);
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (checklistViewModel == null)
             {
                 return NotFound();
@@ -139,17 +138,17 @@ namespace WelfareDenmarkMVC.Controllers
         // POST: ChecklistViewModels/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var checklistViewModel = await _context.ChecklistViewModel.SingleOrDefaultAsync(m => m.Email == id);
+            var checklistViewModel = await _context.ChecklistViewModel.SingleOrDefaultAsync(m => m.Id == id);
             _context.ChecklistViewModel.Remove(checklistViewModel);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ChecklistViewModelExists(string id)
+        private bool ChecklistViewModelExists(int id)
         {
-            return _context.ChecklistViewModel.Any(e => e.Email == id);
+            return _context.ChecklistViewModel.Any(e => e.Id == id);
         }
     }
 }
