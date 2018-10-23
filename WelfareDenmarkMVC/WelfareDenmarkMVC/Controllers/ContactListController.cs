@@ -10,7 +10,7 @@ using WelfareDenmarkMVC.Models;
 
 namespace WelfareDenmarkMVC.Controllers
 {
-    [Route("[controller]/[action]")]
+    
     public class ContactListController : Controller
     {
         private readonly ApplicationDbContext _context;
