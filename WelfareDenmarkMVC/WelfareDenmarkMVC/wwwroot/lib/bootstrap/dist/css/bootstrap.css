@@ -6946,9 +6946,13 @@ button.close {
 
 /*Styling for the FAQ*/
 #Faq-Body {
-    background-image: url('http://waleshealthcare.com/wp-content/uploads/2017/06/dementia.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
+        background-image: url('http://waleshealthcare.com/wp-content/uploads/2017/06/dementia.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        align-content: center;
+        width: auto;
+
 }
 
 .Faq-Welcome {
@@ -6965,6 +6969,7 @@ button.close {
 }
 
 .Faq-Container {
+    
     margin-top: 10px;
     box-sizing: border-box;
     background-color: white;
@@ -7042,7 +7047,9 @@ button.close {
     font-weight: normal;
     border-radius: 5%;
     background-color: rgba(255,255,255, 0.6);
-    border: 3px solid black
+    border: 3px solid black;
+    
+        
 }
 
 /*Styling for LogInSupport page*/
