@@ -1,35 +1,10 @@
 ﻿@model IEnumerable<WelfareDenmarkMVC.Models.AccountViewModels.ChecklistViewModel>
 
 @{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
 }
 
-<h2>Huskeliste</h2>
-
-<p>
-    <a asp-action="Create">Lav et nyt punkt til huskeliste</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-                <th>
-                    Oversigt
-                </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ChecklistItem)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Redigér</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Slet</a>
-            </td>
-        </tr>
+@{
+	Html.RenderPartial("_CheckListPartial");
 }
-    </tbody>
-</table>
+
