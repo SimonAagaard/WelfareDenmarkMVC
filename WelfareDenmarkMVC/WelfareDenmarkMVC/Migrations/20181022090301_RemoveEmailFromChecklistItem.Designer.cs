@@ -11,9 +11,10 @@ using WelfareDenmarkMVC.Data;
 namespace WelfareDenmarkMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181022090301_RemoveEmailFromChecklistItem")]
+    partial class RemoveEmailFromChecklistItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,7 +138,7 @@ namespace WelfareDenmarkMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Checklists");
+                    b.ToTable("ChecklistViewModel");
                 });
 
             modelBuilder.Entity("WelfareDenmarkMVC.Models.ApplicationUser", b =>

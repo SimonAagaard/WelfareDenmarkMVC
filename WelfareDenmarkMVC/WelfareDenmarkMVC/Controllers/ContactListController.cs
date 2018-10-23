@@ -10,6 +10,7 @@ using WelfareDenmarkMVC.Models;
 
 namespace WelfareDenmarkMVC.Controllers
 {
+    
     public class ContactListController : Controller
     {
         private readonly ApplicationDbContext _context;

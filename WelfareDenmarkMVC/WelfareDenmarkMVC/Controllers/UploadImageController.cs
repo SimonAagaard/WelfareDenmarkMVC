@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WelfareDenmarkMVC.Controllers
 {
+    [Route("[controller]/[action]")]
     public class UploadImageController : Controller
     {
         private IHostingEnvironment _hostingEnvironment;

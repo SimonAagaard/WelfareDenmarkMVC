@@ -6,14 +6,14 @@
 
 <h2>Huskeliste</h2>
 
-<h4>ChecklistViewModel</h4>
+<h4>Opret indlæg</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ChecklistItem" class="control-label">Gem til huskeliste</label>
+                <label asp-for="ChecklistItem" class="control-label"></label>
                 <input asp-for="ChecklistItem" class="form-control" />
                 <span asp-validation-for="ChecklistItem" class="text-danger"></span>
             </div>
@@ -28,6 +28,3 @@
     <a asp-action="Index">Tilbage til huskeliste</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

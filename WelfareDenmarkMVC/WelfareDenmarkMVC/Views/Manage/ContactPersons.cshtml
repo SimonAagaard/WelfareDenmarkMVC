@@ -1,48 +1,51 @@
 ﻿@model IEnumerable<WelfareDenmarkMVC.Models.ContactListViewModel>
 
 @{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
 }
 
 <h2>Dine kontakter</h2>
 <br />
 <p>
-    <a asp-controller="ContactList" asp-action="Create">
-        <img height="20" width="20" alt="W3Schools" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/512/add-1-icon.png"> Tilføj ny kontakt    
-</a>
+	<a asp-controller="ContactList" asp-action="Create">
+		<img height="20" width="20" alt="W3Schools" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/512/add-1-icon.png"> Tilføj ny kontakt
+	</a>
 </p>
 <table class="table">
-    <thead>
-        <tr class="contact-list-headline-row">
-            <th>
-                @Html.DisplayNameFor(model => model.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr class="contact-list-item">
-                <td class="contact-list-item-text">
-                    <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-contact-512.png" height="20" width="20" />
-                    @Html.DisplayFor(modelItem => item.FullName)
-                </td>
-                <td class="contact-list-item-text">
-                    <img src="https://images.onlinelabels.com/images/clip-art/molumen/molumen_phone_icon.png" height="15" width="15" />
+	<thead>
+		<tr class="contact-list-headline-row">
+			<th>
+				@Html.DisplayNameFor(model => model.FullName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.PhoneNumber)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr class="contact-list-item">
+				<td class="contact-list-item-text">
+					<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-contact-512.png" height="20" width="20" />
+					@Html.DisplayFor(modelItem => item.FullName)
+				</td>
+				<td class="contact-list-item-text">
+					<img src="https://images.onlinelabels.com/images/clip-art/molumen/molumen_phone_icon.png" height="15" width="15" />
 
-                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                </td>
-                <td>
-                    <a asp-controller="ContactList" asp-action="Edit" asp-route-id="@item.ContactID">Redigér</a> |
-                    <a asp-controller="ContactList" asp-action="Delete" asp-route-id="@item.ContactID">Slet</a>
-                </td>
-            </tr>
-        }
-    </tbody>
+					@Html.DisplayFor(modelItem => item.PhoneNumber)
+				</td>
+				<td>
+					<a asp-controller="ContactList" asp-action="Edit" asp-route-id="@item.ContactID">Redigér</a> |
+					<a asp-controller="ContactList" asp-action="Delete" asp-route-id="@item.ContactID">Slet</a>
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>
+
+<script src="~/js/site.js"></script>
+
 
 

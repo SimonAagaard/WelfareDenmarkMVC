@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WelfareDenmarkMVC.Controllers
 {
+    [Route("[controller]/[action]")]
     public class NewsController : Controller
     {
         // GET: /<controller>/

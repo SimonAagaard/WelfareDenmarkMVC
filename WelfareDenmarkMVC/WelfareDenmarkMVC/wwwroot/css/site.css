@@ -156,7 +156,7 @@
         background-image: url('https://image.ibb.co/gb70Mp/latze_16.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-position-y: 40px;
+        background-position-y: 20px;
         transition: 0.5s;
     }
 
@@ -165,14 +165,14 @@
     background-image: url('https://i.imgur.com/Y4wt1Xg.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-position-y: 80px;
+    background-position-y: 120px;
 }
 
     .Mikkel:hover {
         background-image: url('https://i.imgur.com/Y4wt1Xg.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-position-y: 40px;
+        background-position-y: 20px;
         transition: 0.5s;
     }
 
@@ -205,17 +205,17 @@
         transition: 0.5s;
     }
 .Christoffer {
-    background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+    background-image: url('../images/ChrisFace.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-position-y: 80px;
+    background-position-y: 120px;
 }
 
     .Christoffer:hover {
-        background-image: url('https://risibank.fr/cache/stickers/d419/41945-full.png');
+        background-image: url('../images/ChrisFace.png');
         background-position: center;
         background-repeat: no-repeat;
-        background-position-y: 40px;
+        background-position-y: 0px;
         transition: 0.5s;
     }
 
