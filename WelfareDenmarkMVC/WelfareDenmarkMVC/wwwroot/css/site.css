@@ -140,7 +140,6 @@
     .about-us-person:hover {
         background-color: #f4f4f4;
         border-radius: 70%;
-        /*opacity: 0.5;*/
         width: 150px;
         height: 150px;
         margin-top: 20px;
