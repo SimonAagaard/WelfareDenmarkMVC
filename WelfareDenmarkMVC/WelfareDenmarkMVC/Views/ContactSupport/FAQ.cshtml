@@ -1,19 +1,19 @@
 ﻿@{
     ViewData["Title"] = "Ofte Stillede Spørgsmål";
-   
+
 }
 <head>
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="Stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css">
-  
+
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
     <script type="text/javascript" src="~/js/site.js"></script>
 </head>
 <body id="Faq-Body">
-    @*Container div for the whole page*@    
+    @*Container div for the whole page*@
     <div class="Faq-Container">
 
         <div class="Faq-Welcome">Ofte stillede spørgsmål</div>
@@ -22,7 +22,7 @@
 
             @*Q1*@
             <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a1')" style="text-decoration: none">Kan andre se mit info på min huskeliste?</a>
-            <div id="a1" style="display: none">Nej, kun du kan se din eget information. </div>
+            <div id="a1" style="display: none">Nej, kun du kan se dine information. </div>
             <br />
             <br />
 
@@ -50,7 +50,12 @@
             <br />
             <br />
 
+            @*Q6*@
+            <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a6')" style="text-decoration: none">Hvad gør jeg hvis jeg gerne vil støtte teamet bag DemensDuVenter?</a>
+            <div id="a6" style="display: none">Vi har en side med nærmere information om muligheden for at donere til teamet bag <a href="@Url.Action("Donations", "ContactSupport")">her</a></div>
             <br />
+            <br />
+
         </div>
     </div>
 </body>
