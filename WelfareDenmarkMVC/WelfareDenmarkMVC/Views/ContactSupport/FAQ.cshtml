@@ -21,7 +21,7 @@
 
             @*Q1*@
             <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a1')" style="text-decoration: none">Kan andre se mit info på min huskeliste?</a>
-            <div id="a1" style="display: none">Nej, kun du kan se din eget information. </div>
+            <div id="a1" style="display: none">Nej, kun du kan se dine informationer. </div>
             <br />
             <br />
 
@@ -46,6 +46,12 @@
             @*Q5*@
             <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a5')" style="text-decoration: none">Hvad gør jeg hvis jeg har glemt mit kodeord?</a>
             <div id="a5" style="display: none">For at få et nyt kodeord kan du klikke lige <a href="@Url.Action("ForgotPassword", "Account")">her</a></div>
+            <br />
+            <br />
+            
+            @*Q6*@
+            <a class="question" title="Klik for svar" href="javascript:ShowAnswer('a6')" style="text-decoration: none">Hvad gør jeg hvis jeg gerne vil støtte teamet bag DemensDuVenter?</a>
+            <div id="a6" style="display: none">Vi har en side med nærmere information om muligheden for at donere til teamet bag <a href="@Url.Action("Donations", "ContactSupport")">her</a></div>
             <br />
             <br />
 
