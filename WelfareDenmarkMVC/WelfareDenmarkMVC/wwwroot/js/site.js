@@ -91,6 +91,7 @@ window.onload = function () {
 	greetingMessage.innerHTML = greeting;
 }, false;
 
+// Script for image uploading in profile (beta)
 function fileupload(filename) {
     var inputfile = document.getElementById(filename);
     var files = inputfile.files;
@@ -114,6 +115,72 @@ function fileupload(filename) {
     );
 }
 
+// Script for displaying text when checkbox is checked on the medicine page in profile
+function medicineFunction() {
+	// Get the checkboxes
+	var checkBox1 = document.getElementById("check1");
+	var checkBox2 = document.getElementById("check2");
+	var checkBox3 = document.getElementById("check3");
+
+	// Get the output text
+	var text = document.getElementById("medicine");
+
+	//Get the container div
+	var prompt = document.getElementById("medicine-prompt-container");
+
+	// If the checkbox is checked, display the output text
+
+	if (checkBox1.checked == true) {
+		text.innerHTML = "Du har taget phenytoin.";
+		prompt.style.backgroundColor = "#f4dd95";
+		prompt.style.borderColor = "#d8b075";
+	}
+
+	else {
+		text.innerHTML = "Du har endnu ikke taget dagens medicin.";
+		prompt.style.backgroundColor = "#e89088";
+		prompt.style.borderColor = "#a84e46";
+	}
+
+	if (checkBox2.checked == true) {
+		text.innerHTML = "Du har taget acyclovir.";
+		prompt.style.backgroundColor = "#f4dd95";
+		prompt.style.borderColor = "#d8b075";
+	}
+
+	if (checkBox3.checked == true) {
+		text.innerHTML = "Du har taget penicillin.";
+		prompt.style.backgroundColor = "#f4dd95";
+		prompt.style.borderColor = "#d8b075";
+	}
+
+
+	if (checkBox1.checked == true && checkBox2.checked == true && checkBox3.checked == false) {
+		text.innerHTML = "Du har taget phenytoin og acyclovir.";
+		prompt.style.backgroundColor = "#f4dd95";
+		prompt.style.borderColor = "#d8b075";
+	}
+
+	if (checkBox1.checked == true && checkBox2.checked == true && checkBox3.checked == true) {
+		text.innerHTML = "Du har taget dagens medicin.";
+		prompt.style.display = "block";
+		prompt.style.backgroundColor = "#8ccca2";
+		prompt.style.borderColor = "#4b7f5d";
+
+
+	}
+
+	if (checkBox1.checked == false && checkBox2.checked == true && checkBox3.checked == true) {
+		text.innerHTML = "Du har taget acyclovir og penicillin.";
+		prompt.style.backgroundColor = "#f4dd95";
+		prompt.style.borderColor = "#d8b075";
+	}
+
+	if (checkBox1.checked == true && checkBox2.checked == false && checkBox3.checked == true) {
+		text.innerHTML = "Du har taget phenytonin og penicillin.";
+	}
+
+}
 
 //}
 //newSaveButton.onClick = function saveItem() {
