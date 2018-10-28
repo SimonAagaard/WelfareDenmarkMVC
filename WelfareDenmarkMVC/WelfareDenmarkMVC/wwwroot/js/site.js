@@ -65,7 +65,7 @@ function clickCounter() {
 //Script for showing/hidding answers in FAQ
 function ShowAnswer(id) {
     if (document.getElementById(id).style.display == "none") {
-        document.getElementById(id).style.display = '';
+        document.getElementById(id).style.display = "block";
     } else {
         document.getElementById(id).style.display = "none";
     }

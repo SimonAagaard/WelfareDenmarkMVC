@@ -2,13 +2,13 @@
     ViewData["Title"] = "Sikkerhed";
 }
 <head>
-
+    
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="Stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="Stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
-    <script type="text/javascript" src="~/js/site.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>
 
 </head>
 
@@ -20,7 +20,7 @@
                 Vi tager din sikkerhed seriøst, læs herunder hvilke tiltag vi har gjort <br />
                 for at sikre din sikkerhed og privatliv
             </p>
-
+          
             <p style="font-size: 16px; margin-bottom: 50px;">
                 For at forklare og skabe forståelse på den mest tydelige måde har vi inkluderet eksempler og forklaringer på <a style="text-decoration: none" href="@Url.Action("KeyTerms", "ContactSupport")">nøglebegreber,</a> <br />
                 hvis noget leder til spørgsmål er du mere end velkommen til at <a style="text-decoration: none" href="@Url.Action("Contact", "Home")">kontakte os</a>
@@ -35,15 +35,13 @@
                 Når du opretter dig, gemmer vi dine informationer, vi forstår at dette er et stort ansvar og vi arbejder hårdt på at beskytte dine informationer. <br />
                 Du kan vælge at tilføje dit <p class="Security-Tooltip">telefon nummer<span class="Security-TooltipText">Hvis du endnu ikke har gjort det, kan det gøres <a href="@Url.Action("index", "Manage")">her</a></span></p> <br />
                 Der er visse informationer vi ikke ber dig om at oplyse, du kan læse mere om hvilke og hvorfor under <a href="@Url.Action("KeyTerms", "ContactSupport")">følsomme oplysinger</a>
-            </section>
+                </section>
         </div>
-
+        
         <div class="Security-Updates">
             <h1 style="font-size: 28px; font-weight: bolder">Vedligeholdelse og opdateringer</h1>
-            <p>
-                Vi opdaterer løbende vores service for at forbedre brugervenligheden og imødekomme den respons vi får fra vores brugere <br />
-                Informationer om de nyeste opdateringer og nyheder kan du finde lige <a style="text-decoration: none" href="@Url.Action("index", "News")">her</a>
-            </p>
+            <p>Vi opdaterer løbende vores service for at forbedre brugervenligheden og imødekomme den respons vi får fra vores brugere <br />
+                Informationer om de nyeste opdateringer og nyheder kan du finde lige <a style="text-decoration: none" href="@Url.Action("index", "News")">her</a>  </p>
         </div>
     </div>
 </body>
