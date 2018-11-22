@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WelfareDenmarkMVC.Models;
 
-
-
-
 namespace WelfareDenmarkMVC.Controllers
 {
     public class HomeController : Controller
@@ -42,7 +39,6 @@ namespace WelfareDenmarkMVC.Controllers
         }
 
         //Get: /ContactSupport
-
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

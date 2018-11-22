@@ -29,18 +29,28 @@ namespace WelfareDenmarkMVC
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-        
-         
+
+
             services.AddIdentity<ApplicationUser, IdentityRole>(o =>
-                {
-                    o.Password.RequireDigit = true;
-                    o.Password.RequireUppercase = true;
-                    o.Password.RequiredLength = 7;
-                    o.Password.RequireNonAlphanumeric = false;
-                })
+            {
+
+                //Password
+                o.Password.RequireDigit = true;
+                o.Password.RequireUppercase = true;
+                o.Password.RequiredLength = 7;
+                o.Password.RequireNonAlphanumeric = false;
+
+                //Lockout settings
+                o.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
+                o.Lockout.MaxFailedAccessAttempts = 5;
+                o.Lockout.AllowedForNewUsers = true;
+
+                //User settings
+                o.User.RequireUniqueEmail = true;
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-        
+
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
@@ -51,7 +61,7 @@ namespace WelfareDenmarkMVC
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
