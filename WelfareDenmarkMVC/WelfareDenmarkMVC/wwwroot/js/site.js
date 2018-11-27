@@ -135,6 +135,7 @@ function previewFile()
         }
     }
 
+
   //calls the function named previewFile()
 
 // Script for displaying text when checkbox is checked on the medicine page in profile
