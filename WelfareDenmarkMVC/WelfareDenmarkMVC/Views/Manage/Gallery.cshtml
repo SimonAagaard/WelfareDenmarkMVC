@@ -2,7 +2,9 @@
 <h4>@ViewData["Title"]</h4>
 
 <form name="form" action="/UploadImage" enctype="multipart/form-data" method="post">
-    <input id="files" name="files" type="file" multiple onchange="fileupload('files');" />
+    <input name="gallery" type="file" onchange="previewFile()"><br>
+    <img name="galleryimg" src="" height="200" alt="Image preview...">
+
 </form>
 
 

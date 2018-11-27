@@ -92,28 +92,50 @@ window.onload = function () {
 }, false;
 
 // Script for image uploading in profile (beta)
-function fileupload(filename) {
-    var inputfile = document.getElementById(filename);
-    var files = inputfile.files;
-    var fdata = new FormData();
-    for (var i = 0; i != files.length; i++) {
-        fdata.append("files", files[i]);
+//function fileupload(filename) {
+//    var inputfile = document.getElementById(filename);
+//    var files = inputfile.files;
+//    var fdata = new FormData();
+//    for (var i = 0; i != files.length; i++) {
+//        fdata.append("files", files[i]);
+//    }
+
+//    $.ajax(
+//        {
+//            url:"/UploadImage",
+//            data: fdata,
+//            processData: false,
+//            contentType: false,
+//            type: "POST",
+//            success: function (data) {
+//                alert("Dine billeder er nu blevet tilføjet.");
+//            }
+//        }
+
+//    );
+//}
+
+function previewFile()
+    {
+        var preview = document.querySelector("img[name='galleryimg']"); //selects the query named img
+        var file = document.querySelector("input[name='gallery']").files.item(0); //sames as here
+        var reader = new FileReader();
+
+        reader.onload = function ()
+             {
+            preview.src = reader.result;
+
+             }
+        if (file)
+        {
+            reader.readAsDataURL(file); //reads the data as a URL
+        } else
+        {
+            preview.src = "";
+        }
     }
 
-    $.ajax(
-        {
-            url:"/UploadImage",
-            data: fdata,
-            processData: false,
-            contentType: false,
-            type: "POST",
-            success: function (data) {
-                alert("Dine billeder er nu blevet tilføjet.");
-            }
-        }
-
-    );
-}
+  //calls the function named previewFile()
 
 // Script for displaying text when checkbox is checked on the medicine page in profile
 function medicineFunction() {
