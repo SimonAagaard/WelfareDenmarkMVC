@@ -18,6 +18,7 @@ using WelfareDenmarkMVC.Data;
 using WelfareDenmarkMVC.Models.AccountViewModels;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
 namespace WelfareDenmarkMVC.Controllers
 {
@@ -167,13 +168,30 @@ namespace WelfareDenmarkMVC.Controllers
             return View(model);
         }
 
-        [HttpGet]
-        public IActionResult Gallery(UploadImageViewModel uivm)
-        {
-            return View();
-        }
+		public async Task<IActionResult> Gallery(GalleryImageViewModel galleryImageViewModel, IFormFile imageToBeUploaded)
+		{
 
-        [HttpGet]
+			if (!ModelState.IsValid)
+			{
+				return View(galleryImageViewModel);
+			}
+
+			if (imageToBeUploaded != null)
+			{
+				using (var memoryStream = new MemoryStream())
+				{
+					await imageToBeUploaded.CopyToAsync(memoryStream);
+					var imageToBeUploadedByteArray = memoryStream.ToArray();
+					galleryImageViewModel.Image = imageToBeUploadedByteArray;
+				}
+			}
+
+			_context.GalleryImage.Add(galleryImageViewModel);
+			await _context.SaveChangesAsync();
+			return View();
+		}
+
+		[HttpGet]
         public IActionResult Medicine()
         {
             return View();

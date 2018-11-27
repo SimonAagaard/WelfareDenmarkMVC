@@ -24,12 +24,11 @@ namespace WelfareDenmarkMVC.Controllers
             _context = context;             
            }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpGet]
+		public async Task<IActionResult> Index()
+		{
+			return View(await _context.Contacts.ToListAsync());
+		}
+		[HttpGet]
         public IActionResult AddImage()
         {
             return View();
