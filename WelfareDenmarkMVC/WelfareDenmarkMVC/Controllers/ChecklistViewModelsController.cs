@@ -19,17 +19,26 @@ namespace WelfareDenmarkMVC.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
+        //private readonly ChecklistViewModel _checklistViewModel;
 
         public ChecklistViewModelsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;
+            //_checklistViewModel = checklistViewModel;
         }
 
         // GET: ChecklistViewModels
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ChecklistViewModel.ToListAsync());
+            ClaimsPrincipal currentUser = User;
+            var currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ApplicationUser user = await _userManager.FindByIdAsync(currentUserId);
+            if (user != null)
+            {
+                return View(await _context.ChecklistViewModel.Where(c => c.ApplicationUser.Id == user.Id).ToListAsync());
+            }
+            return View("Create");
         }
 
         // GET: ChecklistViewModels/Details/5
