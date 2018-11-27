@@ -28,5 +28,7 @@ namespace WelfareDenmarkMVC.Data
 
 		public DbSet<ContactListViewModel> Contacts { get; set; }
 
-	}
+        public DbSet<GalleryImageViewModel> GalleryImage { get; set; }
+
+    }
 }

@@ -11,9 +11,10 @@ using WelfareDenmarkMVC.Data;
 namespace WelfareDenmarkMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181127120350_GalleryImageAdded")]
+    partial class GalleryImageAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,10 +143,12 @@ namespace WelfareDenmarkMVC.Migrations
 
             modelBuilder.Entity("WelfareDenmarkMVC.Models.AccountViewModels.GalleryImageViewModel", b =>
                 {
-                    b.Property<byte[]>("Image")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.HasKey("Image");
+                    b.Property<byte[]>("Image");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Images");
                 });
