@@ -11,9 +11,10 @@ using WelfareDenmarkMVC.Data;
 namespace WelfareDenmarkMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181127123659_GalleryImageAddedRemovedID")]
+    partial class GalleryImageAddedRemovedID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -133,13 +134,9 @@ namespace WelfareDenmarkMVC.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ApplicationUserId");
-
                     b.Property<string>("ChecklistItem");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Checklists");
                 });
@@ -266,13 +263,6 @@ namespace WelfareDenmarkMVC.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("WelfareDenmarkMVC.Models.AccountViewModels.ChecklistViewModel", b =>
-                {
-                    b.HasOne("WelfareDenmarkMVC.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("Checklists")
-                        .HasForeignKey("ApplicationUserId");
                 });
 #pragma warning restore 612, 618
         }
