@@ -11,9 +11,10 @@ using WelfareDenmarkMVC.Data;
 namespace WelfareDenmarkMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181127101101_customizeIdentity")]
+    partial class customizeIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,16 +143,6 @@ namespace WelfareDenmarkMVC.Migrations
                     b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Checklists");
-                });
-
-            modelBuilder.Entity("WelfareDenmarkMVC.Models.AccountViewModels.GalleryImageViewModel", b =>
-                {
-                    b.Property<byte[]>("Image")
-                        .ValueGeneratedOnAdd();
-
-                    b.HasKey("Image");
-
-                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("WelfareDenmarkMVC.Models.ApplicationUser", b =>

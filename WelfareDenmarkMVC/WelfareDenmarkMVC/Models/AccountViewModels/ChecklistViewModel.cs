@@ -16,6 +16,8 @@ namespace WelfareDenmarkMVC.Models.AccountViewModels
 
         [Key]
         public int Id { get; set; }
+
+        public ApplicationUser ApplicationUser { get; set; }
         
 
     }

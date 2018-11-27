@@ -1,5 +1,11 @@
 ﻿@model WelfareDenmarkMVC.Models.AccountViewModels.ChecklistViewModel
 
+@using Microsoft.AspNetCore.Identity
+@using WelfareDenmarkMVC.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
 @{
     ViewData["Title"] = "Create";
 }

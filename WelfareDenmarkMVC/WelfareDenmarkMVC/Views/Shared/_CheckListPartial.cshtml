@@ -1,13 +1,4 @@
 ﻿@model IEnumerable<WelfareDenmarkMVC.Models.AccountViewModels.ChecklistViewModel>
-
-@using Microsoft.AspNetCore.Identity
-@using WelfareDenmarkMVC.Models
-
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
-
-@if (SignInManager.IsSignedIn(User))
-{
 	<h2>Huskeliste</h2>
 
 	<p>
@@ -38,13 +29,3 @@
 			}
 		</tbody>
 	</table>
-}
-else
-{
-	<h2>Log ind for at se din huskeliste.</h2>
-
-	<div>
-		<h4>Klik <a asp-controller="Account" asp-action="Login">her</a> for at logge ind.</h4>
-	</div>
-
-}

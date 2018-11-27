@@ -124,7 +124,6 @@ function previewFile()
         reader.onload = function ()
              {
             preview.src = reader.result;
-
              }
         if (file)
         {

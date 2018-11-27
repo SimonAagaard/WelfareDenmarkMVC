@@ -1,29 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WelfareDenmarkMVC.Data;
+using WelfareDenmarkMVC.Models;
 using WelfareDenmarkMVC.Models.AccountViewModels;
 
 namespace WelfareDenmarkMVC.Controllers
 {
-    [Route("[controller]/[action]")]
+    [Authorize]
     public class ChecklistViewModelsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
+        //private readonly ChecklistViewModel _checklistViewModel;
 
-        public ChecklistViewModelsController(ApplicationDbContext context)
+        public ChecklistViewModelsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
+            //_checklistViewModel = checklistViewModel;
         }
 
         // GET: ChecklistViewModels
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ChecklistViewModel.ToListAsync());
+            ClaimsPrincipal currentUser = User;
+            var currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ApplicationUser user = await _userManager.FindByIdAsync(currentUserId);
+            if (user != null)
+            {
+                return View(await _context.ChecklistViewModel.Where(c => c.ApplicationUser.Id == user.Id).ToListAsync());
+            }
+            return View("Create");
         }
 
         // GET: ChecklistViewModels/Details/5
@@ -55,8 +70,13 @@ namespace WelfareDenmarkMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ChecklistItem,Id")] ChecklistViewModel checklistViewModel)
+        public async Task<IActionResult> Create([Bind("ChecklistItem,Id,ApplicationUser.Id")] ChecklistViewModel checklistViewModel)
         {
+            ClaimsPrincipal currentUser = User;
+            var currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ApplicationUser user = await _userManager.FindByIdAsync(currentUserId);
+            checklistViewModel.ApplicationUser = user;
+
             if (ModelState.IsValid)
             {
                 _context.Add(checklistViewModel);
@@ -87,7 +107,7 @@ namespace WelfareDenmarkMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ChecklistItem,Id")] ChecklistViewModel checklistViewModel)
+        public async Task<IActionResult> Edit(int id, [Bind("ChecklistItem,Id,ApplicationUser.Id")] ChecklistViewModel checklistViewModel)
         {
             if (id != checklistViewModel.Id)
             {
