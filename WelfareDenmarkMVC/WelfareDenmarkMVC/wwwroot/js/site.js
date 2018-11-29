@@ -118,7 +118,7 @@ window.onload = function () {
 function previewFile()
     {
         var preview = document.querySelector("img[name='galleryimg']"); //selects the query named img
-        var file = document.querySelector("input[name='gallery']").files.item(0); //sames as here
+    var file = document.querySelector("input[name='imageToBeUploaded']").files.item(0); //sames as here
         var reader = new FileReader();
 
         reader.onload = function ()

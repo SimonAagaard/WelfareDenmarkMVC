@@ -178,7 +178,7 @@ namespace WelfareDenmarkMVC.Controllers
         {
             return View();
         }
-        [HttpPost]
+       [HttpPost]
         public async Task<IActionResult> Gallery(GalleryImageViewModel galleryImageViewModel, IFormFile imageToBeUploaded)
         {
             ClaimsPrincipal currentUser = User;
