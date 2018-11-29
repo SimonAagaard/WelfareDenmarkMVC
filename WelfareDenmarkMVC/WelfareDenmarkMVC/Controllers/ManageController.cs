@@ -19,6 +19,7 @@ using WelfareDenmarkMVC.Models.AccountViewModels;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
 
 namespace WelfareDenmarkMVC.Controllers
 {
@@ -32,6 +33,7 @@ namespace WelfareDenmarkMVC.Controllers
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
         private readonly ApplicationDbContext _context;
+        //private readonly GalleryImageViewModel _galleryManager;
 
         private IHostingEnvironment _env;
 
@@ -42,6 +44,7 @@ namespace WelfareDenmarkMVC.Controllers
         public ManageController(
           UserManager<ApplicationUser> userManager,
           SignInManager<ApplicationUser> signInManager,
+          //GalleryImageViewModel galleryImageViewModel,
           IEmailSender emailSender,
           ILogger<ManageController> logger,
           UrlEncoder urlEncoder,
@@ -55,6 +58,7 @@ namespace WelfareDenmarkMVC.Controllers
             _urlEncoder = urlEncoder;
             _context = context;
             _env = env;
+            //_galleryManager = galleryImageViewModel;
         }
 
         [TempData]
@@ -168,30 +172,40 @@ namespace WelfareDenmarkMVC.Controllers
             return View(model);
         }
 
-		public async Task<IActionResult> Gallery(GalleryImageViewModel galleryImageViewModel, IFormFile imageToBeUploaded)
-		{
+       
+        [HttpGet]
+        public IActionResult Gallery()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Gallery(GalleryImageViewModel galleryImageViewModel, IFormFile imageToBeUploaded)
+        {
+            ClaimsPrincipal currentUser = User;
+            var currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ApplicationUser user = await _userManager.FindByIdAsync(currentUserId);
+            galleryImageViewModel.ApplicationUser = user;
 
-			if (!ModelState.IsValid)
-			{
-				return View(galleryImageViewModel);
-			}
+            if (!ModelState.IsValid)
+            {
+                return View(galleryImageViewModel);
+            }
 
-			if (imageToBeUploaded != null)
-			{
-				using (var memoryStream = new MemoryStream())
-				{
-					await imageToBeUploaded.CopyToAsync(memoryStream);
-					var imageToBeUploadedByteArray = memoryStream.ToArray();
-					galleryImageViewModel.Image = imageToBeUploadedByteArray;
-				}
-			}
+            if (imageToBeUploaded != null)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await imageToBeUploaded.CopyToAsync(memoryStream);
+                    var imageToBeUploadedByteArray = memoryStream.ToArray();
+                    galleryImageViewModel.Image = imageToBeUploadedByteArray;
+                }
+            }
 
-			_context.GalleryImage.Add(galleryImageViewModel);
-			await _context.SaveChangesAsync();
-			return View();
-		}
-
-		[HttpGet]
+            _context.GalleryImage.Add(galleryImageViewModel);
+            await _context.SaveChangesAsync();
+            return View(galleryImageViewModel);
+        }
+        [HttpGet]
         public IActionResult Medicine()
         {
             return View();

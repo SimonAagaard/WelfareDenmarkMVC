@@ -1,13 +1,13 @@
-﻿
+﻿@model WelfareDenmarkMVC.Models.ManageViewModels.GalleryImageViewModel;
+
 <h4>@ViewData["Title"]</h4>
 
-@model GalleryImageViewModel;
 @using WelfareDenmarkMVC.Data;
 @inject ApplicationDbContext _context;
 
 
 <form method="post" enctype="multipart/form-data">
-    <input name="gallery" type="file" onchange="previewFile()"  ><br>
+    <input name="gallery" type="file" onchange="previewFile()"><br>
     <img name="galleryimg" src="" height="200" alt="Dit billede bliver vist her"><br>
     <input type="submit" value="Submit" class="btn btn-default">
 </form>

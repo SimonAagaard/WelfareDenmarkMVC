@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WelfareDenmarkMVC.Models;
 using WelfareDenmarkMVC.Models.AccountViewModels;
+using WelfareDenmarkMVC.Models.ManageViewModels;
 
 namespace WelfareDenmarkMVC.Data
 {

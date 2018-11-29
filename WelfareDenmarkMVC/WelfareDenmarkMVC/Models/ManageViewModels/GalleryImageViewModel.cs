@@ -6,17 +6,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WelfareDenmarkMVC.Models.AccountViewModels
+namespace WelfareDenmarkMVC.Models.ManageViewModels
 {
     [Table("Images")]
     public class GalleryImageViewModel
     {
             
-            [DisplayName("Billede")]
-            [Key]
-            public byte[] Image { get; set; }
+        [DisplayName("Billede(r)")]
+           
+        public byte[] Image { get; set; }
 
-            //[Key]
-            //public int Id { get; set; }
-        }
+        [Key]
+        public int Id { get; set; }
+       
+        public ApplicationUser ApplicationUser { get; set; }
+    }
 }
