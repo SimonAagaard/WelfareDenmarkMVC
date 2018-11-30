@@ -13,8 +13,9 @@ namespace WelfareDenmarkMVC.Models.ManageViewModels
     {
             
         [DisplayName("Billede(r)")]
-           
-        public byte[] Image { get; set; }
+
+		[UIHint("Photo")]
+		public byte[] Image { get; set; }
 
         [Key]
         public int Id { get; set; }

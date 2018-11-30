@@ -174,11 +174,13 @@ namespace WelfareDenmarkMVC.Controllers
 
        
         [HttpGet]
-        public IActionResult Gallery()
+        public async Task <IActionResult> Gallery()
         {
-            return View();
-        }
-       [HttpPost]
+			var Images = await _context.GalleryImage.Include(c => c.ApplicationUser).ToListAsync();
+			return View(Images);
+		}
+
+		[HttpPost]
         public async Task<IActionResult> Gallery(GalleryImageViewModel galleryImageViewModel, IFormFile imageToBeUploaded)
         {
             ClaimsPrincipal currentUser = User;
@@ -203,9 +205,9 @@ namespace WelfareDenmarkMVC.Controllers
 
             _context.GalleryImage.Add(galleryImageViewModel);
             await _context.SaveChangesAsync();
-            return View(galleryImageViewModel);
-        }
-        [HttpGet]
+			return View(await _context.GalleryImage.ToListAsync());
+		}
+		[HttpGet]
         public IActionResult Medicine()
         {
             return View();

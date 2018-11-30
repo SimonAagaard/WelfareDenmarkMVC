@@ -1,16 +1,19 @@
-﻿
+﻿@model IEnumerable<WelfareDenmarkMVC.Models.ManageViewModels.GalleryImageViewModel>
+
 
 <h4>@ViewData["Title"]</h4>
-@using WelfareDenmarkMVC.Data;
-@model GalleryImageViewModel;
 
 
+@foreach (var item in Model)
+{
+	<img src="data:image;base64,@System.Convert.ToBase64String(item.Image)" />
+}
 
 
 <form method="post" asp-controller="Manage" enctype="multipart/form-data" asp-action="Gallery">
-    <input name="imageToBeUploaded" type="file" onchange="previewFile()"><br>
-    <img name="galleryimg" src="" height="200" alt="Dit billede bliver vist her"><br>
-    <input type="submit" value="Gem" />
+	<input name="imageToBeUploaded" type="file" onchange="previewFile()"><br>
+	<img name="galleryimg" src="" height="200" alt="Dit billede bliver vist her"><br>
+	<input type="submit" value="Gem" />
 </form>
 
 
