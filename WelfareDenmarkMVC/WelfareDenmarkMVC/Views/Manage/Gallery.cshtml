@@ -3,18 +3,28 @@
 
 <h4>@ViewData["Title"]</h4>
 
-
-@foreach (var item in Model)
-{
-	<img src="data:image;base64,@System.Convert.ToBase64String(item.Image)" />
-}
+@using WelfareDenmarkMVC.Controllers;
 
 
-<form method="post" asp-controller="Manage" enctype="multipart/form-data" asp-action="Gallery">
-	<input name="imageToBeUploaded" type="file" onchange="previewFile()"><br>
-	<img name="galleryimg" src="" height="200" alt="Dit billede bliver vist her"><br>
-	<input type="submit" value="Gem" />
-</form>
+
+    <form method="post" asp-controller="Manage" enctype="multipart/form-data" asp-action="Gallery">
+
+        <input name="imageToBeUploaded" type="file" onchange="previewFile()"><br>
+        <img name="galleryimg" src="" height="200" alt="Dit billede bliver vist her"><br>
+        <input type="submit" value="Gem" />
+    </form>
+ 
+    
+        @foreach (GalleryImageViewModel Image in @Model)
+         {
+            @if (Image.Image != null)
+             {
+                <div>
+           <img src="data:image;base64,@System.Convert.ToBase64String(Image.Image)"/>
+             </div>
+             }
+         }
 
 
-<script src="/js/site.js"></script>
+
+    <script src="/js/site.js"></script>
