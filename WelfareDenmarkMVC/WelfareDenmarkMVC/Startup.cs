@@ -30,6 +30,8 @@ namespace WelfareDenmarkMVC
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddTransient<ProxyAPI>();
+
             services.AddIdentity<ApplicationUser, IdentityRole>(o =>
             {
 

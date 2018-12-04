@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -8,9 +9,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using WelfareDenmarkMVC.Data;
 using WelfareDenmarkMVC.Models;
 using WelfareDenmarkMVC.Models.AccountViewModels;
+using WelfareDenmarkMVC.Services;
 
 namespace WelfareDenmarkMVC.Controllers
 {
@@ -19,13 +22,13 @@ namespace WelfareDenmarkMVC.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
-        //private readonly ChecklistViewModel _checklistViewModel;
+        private readonly ProxyAPI _proxy;
 
-        public ChecklistViewModelsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public ChecklistViewModelsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, ProxyAPI proxy)
         {
             _context = context;
             _userManager = userManager;
-            //_checklistViewModel = checklistViewModel;
+            _proxy = proxy;
         }
 
         // GET: ChecklistViewModels
@@ -36,21 +39,22 @@ namespace WelfareDenmarkMVC.Controllers
             ApplicationUser user = await _userManager.FindByIdAsync(currentUserId);
             if (user != null)
             {
-                return View(await _context.ChecklistViewModel.Where(c => c.ApplicationUser.Id == user.Id).ToListAsync());
+                var checklists = await _proxy.GetAllAsync();
+                var sortedlist = checklists.Where(c => c.ApplicationUser.Id == user.Id).ToList();
+                return View(sortedlist); //_context.ChecklistViewModel.Where(c => c.ApplicationUser.Id == user.Id).ToListAsync());
             }
             return View("Create");
         }
 
         // GET: ChecklistViewModels/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var checklistViewModel = await _context.ChecklistViewModel
-                .SingleOrDefaultAsync(m => m.Id == id);
+            var checklistViewModel = await _proxy.GetDetailsAsync(id);  //_context.ChecklistViewModel.SingleOrDefaultAsync(m => m.Id == id);
             if (checklistViewModel == null)
             {
                 return NotFound();
