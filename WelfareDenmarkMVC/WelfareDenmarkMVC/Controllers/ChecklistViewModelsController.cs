@@ -118,6 +118,10 @@ namespace WelfareDenmarkMVC.Controllers
                 return NotFound();
             }
 
+            ClaimsPrincipal currentUser = User;
+            var currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            checklistViewModel.ApplicationUser = await _userManager.FindByIdAsync(currentUserId);
+
             if (ModelState.IsValid)
             {
                 try
