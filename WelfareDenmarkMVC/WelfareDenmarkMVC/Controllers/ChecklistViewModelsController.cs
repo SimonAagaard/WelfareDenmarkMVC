@@ -40,8 +40,8 @@ namespace WelfareDenmarkMVC.Controllers
             if (user != null)
             {
                 var checklists = await _proxy.GetAllAsync();
-                var sortedlist = checklists.Where(c => c.ApplicationUser.Id == user.Id).ToList();
-                return View(sortedlist); //_context.ChecklistViewModel.Where(c => c.ApplicationUser.Id == user.Id).ToListAsync());
+                var sortedlist = checklists.Where(c => c.ApplicationUserId == user.Id).ToList();
+                return View(sortedlist);
             }
             return View("Create");
         }
@@ -54,7 +54,7 @@ namespace WelfareDenmarkMVC.Controllers
                 return NotFound();
             }
 
-            var checklistViewModel = await _proxy.GetDetailsAsync(id);  //_context.ChecklistViewModel.SingleOrDefaultAsync(m => m.Id == id);
+            var checklistViewModel = await _proxy.GetDetailsAsync(id);
             if (checklistViewModel == null)
             {
                 return NotFound();
