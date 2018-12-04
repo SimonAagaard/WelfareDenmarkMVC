@@ -20,6 +20,7 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
+using System.Web;
 
 namespace WelfareDenmarkMVC.Controllers
 {
@@ -176,11 +177,22 @@ namespace WelfareDenmarkMVC.Controllers
         [HttpGet]
         public async Task <IActionResult> Gallery()
         {
-			var Images = await _context.GalleryImage.Include(c => c.ApplicationUser).ToListAsync();
-			return View(Images);
+            ClaimsPrincipal currentUser = User;
+            var currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            ApplicationUser user = await _userManager.FindByIdAsync(currentUserId);
+            if (user != null)
+            {
+                var Images = await _context.GalleryImage.Where(c => c.ApplicationUser.Id == user.Id ).ToListAsync();
+                return View(Images);
+            }
+            else
+            {
+                return View("Gallery");
+            }
+			
 		}
 
-		[HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Gallery(GalleryImageViewModel galleryImageViewModel, IFormFile imageToBeUploaded)
         {
             ClaimsPrincipal currentUser = User;
@@ -205,8 +217,16 @@ namespace WelfareDenmarkMVC.Controllers
 
             _context.GalleryImage.Add(galleryImageViewModel);
             await _context.SaveChangesAsync();
-			return View(await _context.GalleryImage.ToListAsync());
-		}
+            if (user != null)
+            {
+                var Images = await _context.GalleryImage.Where(c => c.ApplicationUser.Id == user.Id).ToListAsync();
+                return View(Images);
+            }
+            else
+            {
+                return View("Gallery");
+            }
+        }
 		[HttpGet]
         public IActionResult Medicine()
         {
