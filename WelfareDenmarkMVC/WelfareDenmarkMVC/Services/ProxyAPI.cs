@@ -14,7 +14,7 @@ namespace WelfareDenmarkMVC.Services
     public class ProxyAPI
     {
         //For GetDetailsAsync
-        const string baseUrl = "http://localhost:56908/api";
+        const string baseUrl = "https://welfaredenmarkapi.azurewebsites.net/api";
 
         public async Task<List<ChecklistViewModel>> GetAllAsync()
         {
@@ -23,7 +23,7 @@ namespace WelfareDenmarkMVC.Services
             var client = new HttpClient();
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            HttpResponseMessage response = await client.GetAsync("http://localhost:56908/api/checklists");
+            HttpResponseMessage response = await client.GetAsync("https://welfaredenmarkapi.azurewebsites.net/api/checklists");
 
             if (!response.IsSuccessStatusCode)
             {
