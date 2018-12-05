@@ -18,7 +18,7 @@ namespace WelfareDenmarkMVC.Services
 
         public async Task<List<ChecklistViewModel>> GetAllAsync()
         {
-            List<ChecklistViewModel> checklists = new List<ChecklistViewModel>();
+            //List<ChecklistViewModel> checklists = new List<ChecklistViewModel>();
 
             var client = new HttpClient();
             client.DefaultRequestHeaders.Clear();
