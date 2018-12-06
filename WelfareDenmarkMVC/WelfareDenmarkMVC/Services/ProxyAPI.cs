@@ -15,7 +15,7 @@ namespace WelfareDenmarkMVC.Services
     public class ProxyAPI
     {
         //For GetDetailsAsync
-        const string baseUrl = "http://localhost:56908/api";
+        const string baseUrl = "https://welfaredenmarkapi.azurewebsites.net/api";
 
         [HttpGet]
         public async Task<List<ChecklistViewModel>> GetAllAsync()
