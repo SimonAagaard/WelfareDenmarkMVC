@@ -15,8 +15,9 @@ namespace WelfareDenmarkMVC.Services
     public class ProxyAPI
     {
         //For GetDetailsAsync
-        const string baseUrl = "https://welfaredenmarkapi.azurewebsites.net/api";
+        const string baseUrl = "http://localhost:56908/api";
 
+        [HttpGet]
         public async Task<List<ChecklistViewModel>> GetAllAsync()
         {
             //List<ChecklistViewModel> checklists = new List<ChecklistViewModel>();
@@ -44,13 +45,23 @@ namespace WelfareDenmarkMVC.Services
             return JsonConvert.DeserializeObject<ChecklistViewModel>(json);
         }
 
-        //[HttpPut]
-        //public async Task<ChecklistViewModel> EditChecklistAsync(int id)
-        //{
-        //    var url = $"{baseUrl}/Checklists/{id}";
-        //    var client = new HttpClient();
+        [HttpPut]
+        public async Task<ChecklistViewModel> EditChecklistAsync(ChecklistViewModel checklistViewModel)
+        {
+            var url = $"{baseUrl}/Checklists/{checklistViewModel.Id}";
+            var client = new HttpClient();
+            var json = new StringContent(JsonConvert.SerializeObject(checklistViewModel), Encoding.UTF8, "application/json");
 
-        //}
+            var response = await client.PutAsync(url, json);
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+            var checklistResponse = response.Content.ReadAsStringAsync().Result;
+
+            return JsonConvert.DeserializeObject<ChecklistViewModel>(checklistResponse);
+
+        }
 
     }
 }
