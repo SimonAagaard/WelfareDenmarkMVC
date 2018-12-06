@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace WelfareDenmarkMVC.Services
             return JsonConvert.DeserializeObject<List<ChecklistViewModel>>(checklistResponse);
         }
 
+        [HttpGet]
         public async Task<ChecklistViewModel> GetDetailsAsync(int id)
         {
             var url = $"{baseUrl}/Checklists/{id}";
@@ -41,6 +43,14 @@ namespace WelfareDenmarkMVC.Services
             string json = await client.GetStringAsync(url);
             return JsonConvert.DeserializeObject<ChecklistViewModel>(json);
         }
+
+        //[HttpPut]
+        //public async Task<ChecklistViewModel> EditChecklistAsync(int id)
+        //{
+        //    var url = $"{baseUrl}/Checklists/{id}";
+        //    var client = new HttpClient();
+
+        //}
 
     }
 }
