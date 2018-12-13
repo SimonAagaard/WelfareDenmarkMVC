@@ -193,6 +193,7 @@ namespace WelfareDenmarkMVC.Controllers
 		}
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Gallery(GalleryImageViewModel galleryImageViewModel, IFormFile imageToBeUploaded)
         {
             ClaimsPrincipal currentUser = User;
