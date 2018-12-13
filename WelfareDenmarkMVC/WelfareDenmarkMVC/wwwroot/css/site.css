@@ -365,3 +365,30 @@
 	border-width: 3px;
 	border-radius: 10px;
 }
+
+.img-gallery-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	float: left;
+}
+
+.img-gallery {
+	height: 200px;
+	width: 200px;
+	padding: 20px;
+	order: 1;
+}
+
+.img-delete {
+	order: 2;
+	text-align: center;
+}
+
+.img-gallery:hover {
+	transform: scale(1.5);
+	transition: transform .1s;
+}
+
+.img-delete-confirm {
+}

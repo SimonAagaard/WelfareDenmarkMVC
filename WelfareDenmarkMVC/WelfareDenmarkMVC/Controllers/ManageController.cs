@@ -228,6 +228,35 @@ namespace WelfareDenmarkMVC.Controllers
                 return View("Gallery");
             }
         }
+
+		public async Task<IActionResult> DeleteGalleryImage(string id)
+		{
+			if (id == null)
+			{
+				return NotFound();
+			}
+
+			var galleryImageViewModel = await _context.GalleryImage
+				.SingleOrDefaultAsync(m => m.Id.ToString() == id);
+			if (galleryImageViewModel == null)
+			{
+				return NotFound();
+			}
+
+			return View(galleryImageViewModel);
+		}
+
+		[HttpPost, ActionName("Delete")]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> DeleteGalleryImageConfirmed(string id)
+		{
+			var galleryImageViewModel = await _context.GalleryImage.SingleOrDefaultAsync(m => m.Id.ToString()  == id);
+			_context.GalleryImage.Remove(galleryImageViewModel);
+			await _context.SaveChangesAsync();
+			return RedirectToAction(nameof(Index));
+		}
+
+
 		[HttpGet]
         public IActionResult Medicine()
         {

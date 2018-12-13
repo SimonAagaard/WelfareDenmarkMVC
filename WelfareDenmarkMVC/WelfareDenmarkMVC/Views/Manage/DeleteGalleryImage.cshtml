@@ -1,0 +1,23 @@
+﻿@model WelfareDenmarkMVC.Models.ManageViewModels.GalleryImageViewModel
+
+@{
+	ViewData["Title"] = "Delete";
+}
+
+<h2>Slet</h2>
+
+<h3>Er du sikker på at du vil slette dette billede?</h3>
+<div>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			<img class="img-delete-confirm" src="data:image;base64,@System.Convert.ToBase64String(Model.Image)" style="width: 200px; height: 200px;" />
+		</dt>
+	</dl>
+	<form asp-action="Delete">
+		<input type="hidden" asp-for="Id" />
+		<input type="submit" value="Slet billede" class="btn btn-default" /> |
+		<a asp-action="Gallery">Tilbage til billeder</a>
+	</form>
+</div>
+
