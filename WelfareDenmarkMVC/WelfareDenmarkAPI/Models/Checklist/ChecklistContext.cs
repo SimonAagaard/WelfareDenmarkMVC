@@ -17,7 +17,7 @@ namespace WelfareDenmarkAPI.Models
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-
+            //This is for overriding with specific wishes
             
         }
 

@@ -119,15 +119,16 @@ namespace WelfareDenmarkMVC.Controllers
             }
 
             ClaimsPrincipal currentUser = User;
-            var currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
-            checklistViewModel.ApplicationUser = await _userManager.FindByIdAsync(currentUserId);
+            checklistViewModel.ApplicationUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+             //= await _userManager.FindByIdAsync(currentUserId);
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(checklistViewModel);
-                    await _context.SaveChangesAsync();
+                    await _proxy.EditChecklistAsync(checklistViewModel);
+                    //_context.Update(checklistViewModel);
+                    //await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {

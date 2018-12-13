@@ -12,6 +12,8 @@ namespace WelfareDenmarkMVC.Models.AccountViewModels
     public class ChecklistViewModel
     {
         [DisplayName("Huskeliste indlæg")]
+        [StringLength(1000)]
+        [MinLength(1)]
         public string ChecklistItem { get; set; }
 
         [Key]

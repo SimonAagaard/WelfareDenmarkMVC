@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using WelfareDenmarkAPI.Models;
 
 namespace WelfareDenmarkAPI.Controllers
@@ -46,31 +49,25 @@ namespace WelfareDenmarkAPI.Controllers
             return Ok(checklist);
         }
 
-        // PUT: api/Checklists/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutChecklist([FromRoute] int id, [FromBody] Checklist checklist)
+        [HttpPut("{checklist.Id}")]
+        public HttpResponseMessage PutChecklistAPI(Checklist checklist)
         {
-            if (!ModelState.IsValid)
+            if (checklist == null)
             {
-                return BadRequest(ModelState);
-            }
-
-            if (id != checklist.Id)
-            {
-                return BadRequest();
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
             }
 
             _context.Entry(checklist).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ChecklistExists(id))
+                if (!ChecklistExists(checklist.Id))
                 {
-                    return NotFound();
+                    return new HttpResponseMessage(HttpStatusCode.NotFound);
                 }
                 else
                 {
@@ -78,8 +75,45 @@ namespace WelfareDenmarkAPI.Controllers
                 }
             }
 
-            return NoContent();
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
+
+        //PUT: api/Checklists/5
+        //[HttpPut("{checklist.Id}")]
+        //public async Task<IActionResult> PutChecklist([FromRoute] Checklist checklist)
+        //{
+
+        //    var json = JsonConvert.DeserializeObject(checklist);
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+
+        //    if (!ChecklistExists(checklist.Id))
+        //    {
+        //        return BadRequest();
+        //    }
+
+        //    _context.Entry(checklist).State = EntityState.Modified;
+
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!ChecklistExists(checklist.Id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
+
+        //    return NoContent();
+        //}
 
         // POST: api/Checklists
         [HttpPost]
