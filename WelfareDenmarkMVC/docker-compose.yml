@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  welfaredenmarkmvc:
+    image: ${DOCKER_REGISTRY-}welfaredenmarkmvc
+    build:
+      context: .
+      dockerfile: WelfareDenmarkMVC/Dockerfile

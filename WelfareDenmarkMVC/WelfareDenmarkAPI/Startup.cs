@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 using WelfareDenmarkAPI.Models;
 
 namespace WelfareDenmarkAPI
@@ -31,6 +32,8 @@ namespace WelfareDenmarkAPI
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
                
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info {Title = "WelfareDenmark", Version = "v1"}); });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +49,13 @@ namespace WelfareDenmarkAPI
             }
 
             app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WelfareDenmark");
+                //Nedenstående linje er til hvis man ønsker swagger UI på default URL'en, pt foretrækker jeg http://localhost:<port>/swagger, for at få swagger UI'et
+                //c.RoutePrefix = string.Empty;
+            });
             app.UseMvc();
         }
     }
