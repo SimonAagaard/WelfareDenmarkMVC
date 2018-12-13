@@ -4,19 +4,25 @@
 
 <form method="post" asp-controller="Manage" enctype="multipart/form-data" asp-action="Gallery">
 
-        <input name="imageToBeUploaded" type="file" onchange="previewFile()"><br>
-        <img name="galleryimg" src="" height="200" alt="Dit billede bliver vist her"><br>
-        <input type="submit" value="Gem" />
+	<input name="imageToBeUploaded" type="file" onchange="previewFile()"><br>
+	<img name="galleryimg" src="" height="200" alt="Dit billede bliver vist her"><br>
+	<input type="submit" value="Gem" />
 </form>
-     
+
 @foreach (GalleryImageViewModel Item in @Model)
- {
-    @if (Item.Image != null)
-     {
-        <div>
-          <img src="data:image;base64,@System.Convert.ToBase64String(Item.Image)"/>
-        </div>
-     }
- }
+{
+	@if (Item.Image != null)
+	{
+<div class="img-gallery-container">
+	<img class="img-gallery" src="data:image;base64,@System.Convert.ToBase64String(Item.Image)" />
+	@*<a class="img-delete" asp-controller="Manage" asp-action="DeleteGalleryImage" asp-route-id="@Item.Id">Slet</a>*@
+	<form class="img-delete" asp-controller="Manage" asp-action="DeleteGalleryImage" asp-route-id="@Item.Id">
+		<input type="submit" value="Slet" class="btn btn-default" />
+	</form>
+</div>
+
+	}
+}
 
 <script src="/js/site.js"></script>
+<link href="~/css/site.css" rel="stylesheet" />
