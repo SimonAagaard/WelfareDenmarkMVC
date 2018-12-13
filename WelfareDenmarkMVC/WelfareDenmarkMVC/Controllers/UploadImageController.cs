@@ -20,6 +20,7 @@ namespace WelfareDenmarkMVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Index(IList<IFormFile> files)
         {
             foreach (IFormFile item in files)
